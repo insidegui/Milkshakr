@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */; };
+		DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE220CE029300EF5766 /* Ingredient.swift */; };
 		DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */; };
 		DDFC66AD20CD9EAE000DD478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */; };
 		DDFC66B020CD9EAE000DD478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AE20CD9EAE000DD478 /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientGroup.swift; sourceTree = "<group>"; };
+		DD94ADE220CE029300EF5766 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		DDFC66A220CD9EAD000DD478 /* Milkshakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milkshakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			children = (
 				DDFC66C720CDA21B000DD478 /* Model.swift */,
 				DDFC66C520CDA18B000DD478 /* Product.swift */,
+				DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */,
+				DD94ADE220CE029300EF5766 /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,8 +374,10 @@
 				DDFC66EB20CDB76E000DD478 /* Store.swift in Sources */,
 				DDFC66F220CDB812000DD478 /* ProductView.swift in Sources */,
 				DDFC66FA20CDBF41000DD478 /* ProductTableViewCell.swift in Sources */,
+				DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */,
 				DDFC66EC20CDB76E000DD478 /* ProductStore.swift in Sources */,
 				DDFC66F620CDBA07000DD478 /* Bundle+MilkshakrKit.swift in Sources */,
+				DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

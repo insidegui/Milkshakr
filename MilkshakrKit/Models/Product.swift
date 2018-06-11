@@ -16,6 +16,7 @@ public struct Product: Model {
     public let price: Decimal
     public let discountPrice: Decimal?
     public let isSoldOut: Bool
+    public let ingredientGroups: [IngredientGroup]
 
     public init(identifier: String,
                 name: String,
@@ -23,7 +24,8 @@ public struct Product: Model {
                 imageName: String,
                 price: Decimal,
                 discountPrice: Decimal?,
-                isSoldOut: Bool)
+                isSoldOut: Bool,
+                ingredientGroups: [IngredientGroup])
     {
         self.identifier = identifier
         self.name = name
@@ -32,5 +34,6 @@ public struct Product: Model {
         self.price = price
         self.discountPrice = discountPrice
         self.isSoldOut = isSoldOut
+        self.ingredientGroups = ingredientGroups
     }
 }
