@@ -104,14 +104,39 @@ final class AppFlowController: UIViewController {
         }
     }
 
+    // MARK: - Detail presentation
+
+    func pushDetailForProduct(with identifier: String) {
+        productListViewController.showLoadingIndicatorIfNeeded()
+
+        store.fetch(with: identifier) { [weak self] result in
+            switch result {
+            case .success(let product):
+                self?.pushDetail(for: product)
+            case .error(let error):
+                NSLog("Invalid product identifier: \(identifier). \(error.localizedDescription)")
+            }
+        }
+    }
+
+    func pushDetail(for product: Product) {
+        let viewModel = ProductViewModel(product: product)
+        pushDetail(for: viewModel)
+    }
+
+    func pushDetail(for viewModel: ProductViewModel) {
+        let detailController = ProductDetailsViewController(viewModel: viewModel)
+        rootNavigationController.pushViewController(detailController, animated: true)
+    }
+
 }
 
 // MARK: - ProductListViewControllerDelegate
 
 extension AppFlowController: ProductListViewControllerDelegate {
 
-    func productListViewController(_ controller: ProductListViewController, didSelectProduct product: Product) {
-        print("SELECTED PRODUCT ", product)
+    func productListViewController(_ controller: ProductListViewController, didSelectViewModel viewModel: ProductViewModel) {
+            pushDetail(for: viewModel)
     }
 
 }

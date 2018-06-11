@@ -27,7 +27,7 @@ public final class ProductStore: Store {
 
     public typealias Model = Product
 
-    private let fakeNetworkingDelay: TimeInterval = 1.0
+    private let fakeNetworkingDelay: TimeInterval = 0.5
 
     private var backingStore: [Product] = Product.demoProducts
 

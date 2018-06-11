@@ -29,4 +29,7 @@ public struct Metrics {
     public static let ingredientGroupNameFontSize: CGFloat = 15
     public static let ingredientGroupNameFontWeight: UIFont.Weight = .medium
 
+    public static let largeTitleFontSize: CGFloat = 34
+    public static let largeTitleFontWeight: UIFont.Weight = .bold
+
 }

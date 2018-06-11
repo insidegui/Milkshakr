@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */; };
 		DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE220CE029300EF5766 /* Ingredient.swift */; };
+		DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */; };
 		DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */; };
 		DDFC66AD20CD9EAE000DD478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */; };
 		DDFC66B020CD9EAE000DD478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AE20CD9EAE000DD478 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientGroup.swift; sourceTree = "<group>"; };
 		DD94ADE220CE029300EF5766 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		DDFC66A220CD9EAD000DD478 /* Milkshakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milkshakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				DDFC66D020CDAA73000DD478 /* Accessory */,
 				DDFC66BC20CD9F9D000DD478 /* AppFlowController.swift */,
 				DDFC66BE20CD9FCA000DD478 /* ProductListViewController.swift */,
+				DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */,
 				DDFC66CC20CDA841000DD478 /* LoadingViewController.swift in Sources */,
 				DDFC66BF20CD9FCA000DD478 /* ProductListViewController.swift in Sources */,
+				DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */,
 				DDFC66BD20CD9F9D000DD478 /* AppFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

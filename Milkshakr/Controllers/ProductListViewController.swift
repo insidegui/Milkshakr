@@ -10,7 +10,7 @@ import UIKit
 import MilkshakrKit
 
 protocol ProductListViewControllerDelegate: class {
-    func productListViewController(_ controller: ProductListViewController, didSelectProduct product: Product)
+    func productListViewController(_ controller: ProductListViewController, didSelectViewModel viewModel: ProductViewModel)
 }
 
 final class ProductListViewController: UIViewController {
@@ -34,6 +34,20 @@ final class ProductListViewController: UIViewController {
         title = NSLocalizedString("Welcome", comment: "Product list welcome title")
 
         installTableView()
+        installCustomBackButton()
+    }
+
+    private func installCustomBackButton() {
+        let backItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+
+        backItem.tintColor = .primaryText
+
+        navigationItem.backBarButtonItem = backItem
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -47,6 +61,10 @@ final class ProductListViewController: UIViewController {
     func showLoadingIndicatorIfNeeded() {
         guard viewModels.isEmpty else { return }
 
+        showLoadingIndicator()
+    }
+
+    func showLoadingIndicator() {
         let loading = LoadingViewController()
         loading.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         loading.view.frame = view.bounds
@@ -127,7 +145,7 @@ extension ProductListViewController: UITableViewDataSource, UITableViewDelegate 
         cell.viewModel = viewModel
 
         cell.didReceiveTap = { [unowned self] in
-            self.delegate?.productListViewController(self, didSelectProduct: viewModel.product)
+            self.delegate?.productListViewController(self, didSelectViewModel: viewModel)
         }
 
         return cell
