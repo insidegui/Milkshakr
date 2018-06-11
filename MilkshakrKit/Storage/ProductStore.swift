@@ -54,6 +54,34 @@ public final class ProductStore: Store {
 
 }
 
+extension Ingredient {
+
+    static let cornSyrup = Ingredient(name: "Corn Syrup")
+    static let water = Ingredient(name: "Water")
+    static let milk = Ingredient(name: "Milk", isAllergen: true)
+    static let caramelColor = Ingredient(name: "Caramel Color")
+    static let naturalFlavor = Ingredient(name: "Natural Flavor")
+    static let salt = Ingredient(name: "Salt")
+    static let citricAcid = Ingredient(name: "Citric Acid")
+    static let potassiumSorbate = Ingredient(name: "Potassium Sorbate (Preservative)")
+    static let pectin = Ingredient(name: "Pectin")
+    static let sugar = Ingredient(name: "Sugar")
+    static let cream = Ingredient(name: "Cream")
+    static let nonfatMilk = Ingredient(name: "Nonfat Milk", isAllergen: true)
+    static let liquidSugar = Ingredient(name: "Liquid Sugar")
+
+}
+
+extension IngredientGroup {
+
+    static let demoGroups: [IngredientGroup] = [
+        IngredientGroup(name: "Ice Cream", disclaimer: "", ingredients: [.milk, .sugar, .cream, .cornSyrup, .naturalFlavor]),
+        IngredientGroup(name: "Syrup", disclaimer: "May contain small amounts of other shake flavors served at the restaurant, including egg ingredients when Egg Nog Shakes are available.", ingredients: [.cornSyrup, .water, .caramelColor, .naturalFlavor, .salt, .citricAcid, .potassiumSorbate, .pectin, .sugar]),
+        IngredientGroup(name: "Whipped Cream", disclaimer: "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide).", ingredients: [.cream, .nonfatMilk, .liquidSugar])
+    ]
+
+}
+
 extension Product {
 
     static let demoProducts: [Product] = [
@@ -64,7 +92,8 @@ extension Product {
             imageName: "chocolate_shake",
             price: Decimal(12.99),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -73,7 +102,8 @@ extension Product {
             imageName: "strawberry_shake",
             price: Decimal(18.99),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -82,7 +112,8 @@ extension Product {
             imageName: "vanilla_shake",
             price: Decimal(8.99),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -91,7 +122,8 @@ extension Product {
             imageName: "vanilla_cone",
             price: Decimal(14.99),
             discountPrice: Decimal(9.89),
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -100,7 +132,8 @@ extension Product {
             imageName: "hot_fudge_sundae",
             price: Decimal(18.9),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -109,7 +142,8 @@ extension Product {
             imageName: "mm_shake",
             price: Decimal(15.89),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -118,7 +152,8 @@ extension Product {
             imageName: "kiddie_cone",
             price: Decimal(2.99),
             discountPrice: nil,
-            isSoldOut: true
+            isSoldOut: true,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -127,7 +162,8 @@ extension Product {
             imageName: "hot_caramel_sundae",
             price: Decimal(23.99),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         ),
         Product(
             identifier: UUID().uuidString,
@@ -136,7 +172,8 @@ extension Product {
             imageName: "strawberry_sundae",
             price: Decimal(14.89),
             discountPrice: nil,
-            isSoldOut: false
+            isSoldOut: false,
+            ingredientGroups: IngredientGroup.demoGroups
         )
     ]
 
