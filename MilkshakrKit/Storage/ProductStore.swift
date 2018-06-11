@@ -76,7 +76,7 @@ extension IngredientGroup {
 
     static let demoGroups: [IngredientGroup] = [
         IngredientGroup(name: "Ice Cream", disclaimer: "", ingredients: [.milk, .sugar, .cream, .cornSyrup, .naturalFlavor]),
-        IngredientGroup(name: "Syrup", disclaimer: "May contain small amounts of other shake flavors served at the restaurant, including egg ingredients when Egg Nog Shakes are available.", ingredients: [.cornSyrup, .water, .caramelColor, .naturalFlavor, .salt, .citricAcid, .potassiumSorbate, .pectin, .sugar]),
+        IngredientGroup(name: "Syrup", disclaimer: "May contain small amounts of other shake flavors served at the restaurant.", ingredients: [.cornSyrup, .water, .caramelColor, .naturalFlavor, .salt, .citricAcid, .potassiumSorbate, .pectin, .sugar]),
         IngredientGroup(name: "Whipped Cream", disclaimer: "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide).", ingredients: [.cream, .nonfatMilk, .liquidSugar])
     ]
 

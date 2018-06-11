@@ -32,4 +32,6 @@ public struct Metrics {
     public static let largeTitleFontSize: CGFloat = 34
     public static let largeTitleFontWeight: UIFont.Weight = .bold
 
+    public static let purchaseButtonHeight: CGFloat = 48
+
 }

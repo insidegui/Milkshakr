@@ -126,6 +126,9 @@ final class AppFlowController: UIViewController {
 
     func pushDetail(for viewModel: ProductViewModel) {
         let detailController = ProductDetailsViewController(viewModel: viewModel)
+
+        detailController.delegate = self
+
         rootNavigationController.pushViewController(detailController, animated: true)
     }
 
@@ -137,6 +140,16 @@ extension AppFlowController: ProductListViewControllerDelegate {
 
     func productListViewController(_ controller: ProductListViewController, didSelectViewModel viewModel: ProductViewModel) {
             pushDetail(for: viewModel)
+    }
+
+}
+
+// MARK: - ProductDetailsViewControllerDelegate
+
+extension AppFlowController: ProductDetailsViewControllerDelegate {
+
+    func productDetailsViewController(_ controller: ProductDetailsViewController, didSelectPurchase product: Product) {
+
     }
 
 }

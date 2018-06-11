@@ -11,7 +11,7 @@ import MilkshakrKit
 import PassKit
 
 protocol ProductDetailsViewControllerDelegate: class {
-    func productDetailsViewControllerDidSelectPurchase(_ controller: ProductDetailsViewController)
+    func productDetailsViewController(_ controller: ProductDetailsViewController, didSelectPurchase purchase: Product)
 }
 
 final class ProductDetailsViewController: UIViewController {
@@ -112,10 +112,33 @@ final class ProductDetailsViewController: UIViewController {
     private lazy var scrollView: UIScrollView = {
         let v = UIScrollView()
 
+        v.alwaysBounceVertical = true
         v.translatesAutoresizingMaskIntoConstraints = false
 
         return v
     }()
+
+    private lazy var purchaseButton: PKPaymentButton = {
+        let b = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: UIColor.paymentButtonStyle)
+
+        b.addTarget(self, action: #selector(purchase), for: .touchUpInside)
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.heightAnchor.constraint(equalToConstant: Metrics.purchaseButtonHeight).isActive = true
+
+        return b
+    }()
+
+    private lazy var buttonBackground: UIVisualEffectView = {
+        let v = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+
+        v.translatesAutoresizingMaskIntoConstraints = false
+
+        return v
+    }()
+
+    @objc private func purchase() {
+        delegate?.productDetailsViewController(self, didSelectPurchase: viewModel.product)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,13 +151,24 @@ final class ProductDetailsViewController: UIViewController {
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
         view.addSubview(scrollView)
-        scrollView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.padding).isActive = true
+        scrollView.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.padding).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.padding).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
         scrollView.addSubview(contentStack)
         contentStack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
+
+        view.addSubview(buttonBackground)
+        view.addSubview(purchaseButton)
+        purchaseButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.padding).isActive = true
+        purchaseButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.padding).isActive = true
+        purchaseButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Metrics.padding).isActive = true
+
+        buttonBackground.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        buttonBackground.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        buttonBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        buttonBackground.topAnchor.constraint(equalTo: purchaseButton.topAnchor, constant: -Metrics.padding).isActive = true
 
         updateUI()
     }
@@ -148,6 +182,8 @@ final class ProductDetailsViewController: UIViewController {
 
         contentStack.layoutIfNeeded()
         scrollView.contentSize = scrollView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+
+        scrollView.contentInset = UIEdgeInsets(top: Metrics.padding, left: 0, bottom: Metrics.purchaseButtonHeight, right: 0)
     }
 
 }
