@@ -46,7 +46,7 @@ public struct ProductViewModel {
         let f = NumberFormatter()
 
         f.numberStyle = .currency
-        f.currencyCode = "USD"
+        f.currencyCode = "BRL"
 
         return f
     }()
