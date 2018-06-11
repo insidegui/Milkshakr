@@ -22,4 +22,11 @@ public struct Metrics {
 
     public static let productDescriptionLineHeight: CGFloat = 8
     public static let productDescriptionFontSize: CGFloat = 13
+
+    public static let detailedProductDescriptionLineHeight: CGFloat = 10
+    public static let detailedProductDescriptionFontSize: CGFloat = 15
+
+    public static let ingredientGroupNameFontSize: CGFloat = 15
+    public static let ingredientGroupNameFontWeight: UIFont.Weight = .medium
+
 }

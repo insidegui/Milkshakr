@@ -31,6 +31,17 @@ public struct ProductViewModel {
         ]
     }()
 
+    private static let ingredientGroupTitleAttributes: [NSAttributedString.Key: Any] = {
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = Metrics.productDescriptionLineHeight
+
+        return [
+            .foregroundColor: UIColor.primaryText,
+            .paragraphStyle: style,
+            .font: UIFont.systemFont(ofSize: Metrics.ingredientGroupNameFontSize, weight: Metrics.ingredientGroupNameFontWeight)
+        ]
+    }()
+
     private static let priceFormatter: NumberFormatter = {
         let f = NumberFormatter()
 
@@ -52,6 +63,24 @@ public struct ProductViewModel {
 
     public var image: UIImage? {
         return UIImage(named: product.imageName, in: .milkshakrKit, compatibleWith: nil)
+    }
+
+    public var attributedIngredientGroups: NSAttributedString {
+        let result = NSMutableAttributedString()
+
+        product.ingredientGroups.forEach { group in
+            let attributedTitle = NSAttributedString(string: group.name + "\n", attributes: ProductViewModel.ingredientGroupTitleAttributes)
+
+            var info = group.ingredients.map({ $0.name }).joined(separator: ", ")
+            info += ". \(group.disclaimer)\n\n"
+
+            let attributedInfo = NSAttributedString(string: info, attributes: ProductViewModel.descriptionAttributes)
+
+            result.append(attributedTitle)
+            result.append(attributedInfo)
+        }
+
+        return result.copy() as! NSAttributedString
     }
 
 }
