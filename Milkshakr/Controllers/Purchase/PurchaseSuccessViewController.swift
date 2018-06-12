@@ -82,6 +82,16 @@ final class PurchaseSuccessViewController: UIViewController {
         return b
     }()
 
+    private lazy var doneButton: UIButton = {
+        let b = UIButton(type: .system)
+
+        b.addTarget(self, action: #selector(close), for: .touchUpInside)
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.setTitle(NSLocalizedString("Done", comment: "Done button title"), for: .normal)
+
+        return b
+    }()
+
     private lazy var siriMessageStack: UIStackView = {
         let v = UIStackView(arrangedSubviews: [siriMessageLabel, addToSiriButton])
 
@@ -91,6 +101,10 @@ final class PurchaseSuccessViewController: UIViewController {
 
         return v
     }()
+
+    @objc private func close() {
+        dismiss(animated: true, completion: nil)
+    }
 
     @objc private func addToSiri() {
         delegate?.purchaseSuccessViewControllerDidSelectAddToSiri(self)
@@ -110,6 +124,10 @@ final class PurchaseSuccessViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(messageLabel)
         view.addSubview(siriMessageStack)
+        view.addSubview(doneButton)
+
+        doneButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Metrics.smallPadding).isActive = true
+        doneButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.smallPadding).isActive = true
 
         iconView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Metrics.successTitleToSafeAreaMargin).isActive = true
         iconView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
