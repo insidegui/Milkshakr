@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return AppFlowController(store: store)
     }()
 
+    private lazy var deepLinkHandler: DeepLinkHandler = {
+        return DeepLinkHandler(flowController)
+    }()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         window?.rootViewController = flowController
@@ -31,19 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
-        guard userActivityType == Constants.userActivityType else { return false }
-
-        flowController.goHome()
-        
-        return true
+        return deepLinkHandler.prepareToHandle(type: userActivityType)
     }
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        guard userActivity.activityType == Constants.userActivityType else { return false }
-
-        flowController.pushDetail(from: userActivity)
-
-        return true
+        return deepLinkHandler.handle(userActivity)
     }
 
 }

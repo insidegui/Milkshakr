@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		DD01261A20D070EE00455C3A /* ProductViewModel+NSUserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */; };
 		DD01261D20D0713000455C3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01261C20D0713000455C3A /* Constants.swift */; };
+		DD01261F20D0800400455C3A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; };
+		DD01262020D0800B00455C3A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		DD01262220D08AE500455C3A /* PurchaseViewModel+Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */; };
+		DD01262420D08CD300455C3A /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01262320D08CD300455C3A /* DeepLinkHandler.swift */; };
 		DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */; };
 		DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE220CE029300EF5766 /* Ingredient.swift */; };
 		DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */; };
 		DD94ADE920CE15DA00EF5766 /* PurchaseFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */; };
 		DD94ADEC20CE19FA00EF5766 /* ApplePayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADEB20CE19FA00EF5766 /* ApplePayConfiguration.swift */; };
 		DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */; };
-		DDE10A9C20CF4A5B00D4EC39 /* PurchaseSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9B20CF4A5B00D4EC39 /* PurchaseSuccessViewModel.swift */; };
+		DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */; };
 		DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */; };
 		DDFC66AD20CD9EAE000DD478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */; };
 		DDFC66B020CD9EAE000DD478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AE20CD9EAE000DD478 /* LaunchScreen.storyboard */; };
@@ -65,13 +69,16 @@
 /* Begin PBXFileReference section */
 		DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewModel+NSUserActivity.swift"; sourceTree = "<group>"; };
 		DD01261C20D0713000455C3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DD01261E20D0800400455C3A /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseViewModel+Intent.swift"; sourceTree = "<group>"; };
+		DD01262320D08CD300455C3A /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientGroup.swift; sourceTree = "<group>"; };
 		DD94ADE220CE029300EF5766 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseFlowController.swift; sourceTree = "<group>"; };
 		DD94ADEB20CE19FA00EF5766 /* ApplePayConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayConfiguration.swift; sourceTree = "<group>"; };
 		DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessViewController.swift; sourceTree = "<group>"; };
-		DDE10A9B20CF4A5B00D4EC39 /* PurchaseSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessViewModel.swift; sourceTree = "<group>"; };
+		DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 		DDFC66A220CD9EAD000DD478 /* Milkshakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milkshakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */,
+				DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */,
+				DD01262320D08CD300455C3A /* DeepLinkHandler.swift */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -248,7 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFC66F320CDB891000DD478 /* ProductViewModel.swift */,
-				DDE10A9B20CF4A5B00D4EC39 /* PurchaseSuccessViewModel.swift */,
+				DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFC66C920CDA757000DD478 /* ProductImages.xcassets */,
+				DD01261E20D0800400455C3A /* Intents.intentdefinition */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -420,10 +430,12 @@
 				DD94ADE920CE15DA00EF5766 /* PurchaseFlowController.swift in Sources */,
 				DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */,
 				DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */,
+				DD01262020D0800B00455C3A /* Intents.intentdefinition in Sources */,
 				DDFC66CC20CDA841000DD478 /* LoadingViewController.swift in Sources */,
 				DDFC66BF20CD9FCA000DD478 /* ProductListViewController.swift in Sources */,
 				DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */,
 				DD94ADEC20CE19FA00EF5766 /* ApplePayConfiguration.swift in Sources */,
+				DD01262420D08CD300455C3A /* DeepLinkHandler.swift in Sources */,
 				DDFC66BD20CD9F9D000DD478 /* AppFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,13 +445,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDFC66F420CDB891000DD478 /* ProductViewModel.swift in Sources */,
+				DD01262220D08AE500455C3A /* PurchaseViewModel+Intent.swift in Sources */,
 				DDFC66ED20CDB78F000DD478 /* Model.swift in Sources */,
 				DDFC66F020CDB7FE000DD478 /* Colors.swift in Sources */,
 				DDFC66EE20CDB78F000DD478 /* Product.swift in Sources */,
 				DDFC66F820CDBDAA000DD478 /* Metrics.swift in Sources */,
 				DD01261D20D0713000455C3A /* Constants.swift in Sources */,
+				DD01261F20D0800400455C3A /* Intents.intentdefinition in Sources */,
 				DDFC66EB20CDB76E000DD478 /* Store.swift in Sources */,
-				DDE10A9C20CF4A5B00D4EC39 /* PurchaseSuccessViewModel.swift in Sources */,
+				DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */,
 				DDFC66F220CDB812000DD478 /* ProductView.swift in Sources */,
 				DDFC66FA20CDBF41000DD478 /* ProductTableViewCell.swift in Sources */,
 				DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */,

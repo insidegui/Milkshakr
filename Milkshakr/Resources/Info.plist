@@ -22,6 +22,7 @@
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>OrderMilkshakeIntent</string>
 		<string>br.com.guilhermerambo.Milkshakr.activity</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

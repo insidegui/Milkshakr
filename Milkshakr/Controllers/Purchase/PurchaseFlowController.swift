@@ -69,10 +69,20 @@ final class PurchaseFlowController: NSObject {
         // only one product is supported for now
         guard let product = products.first else { return }
 
-        let success = PurchaseSuccessViewController(viewModel: PurchaseSuccessViewModel(product: product))
+        let purchaseViewModel = PurchaseViewModel(product: product)
+        let success = PurchaseSuccessViewController(viewModel: purchaseViewModel)
 
         presenter?.present(success, animated: true) { [unowned self] in
             self.delegate?.purchaseFlowControllerDidPresentSuccessScreen(self)
+            self.donateInteraction(with: purchaseViewModel)
+        }
+    }
+
+    private func donateInteraction(with viewModel: PurchaseViewModel) {
+        guard #available(iOS 12.0, *) else { return }
+
+        viewModel.interaction.donate { error in
+            NSLog("Interaction donation error: \(String(describing: error))")
         }
     }
 

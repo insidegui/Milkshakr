@@ -17,9 +17,9 @@ final class PurchaseSuccessViewController: UIViewController {
 
     weak var delegate: PurchaseSuccessViewControllerDelegate?
 
-    let viewModel: PurchaseSuccessViewModel
+    let viewModel: PurchaseViewModel
 
-    init(viewModel: PurchaseSuccessViewModel) {
+    init(viewModel: PurchaseViewModel) {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)

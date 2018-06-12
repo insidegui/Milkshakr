@@ -1,5 +1,5 @@
 //
-//  PurchaseSuccessViewModel.swift
+//  PurchaseViewModel.swift
 //  MilkshakrKit
 //
 //  Created by Guilherme Rambo on 11/06/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct PurchaseSuccessViewModel {
+public struct PurchaseViewModel {
 
     public let product: Product
 
@@ -51,10 +51,10 @@ public struct PurchaseSuccessViewModel {
         let introFormat = NSLocalizedString("Your delicious %@ is being prepared, ", comment: "Introduction to purchase success message")
         let intro = String(format: introFormat, product.name)
 
-        result.append(NSAttributedString(string: intro, attributes: PurchaseSuccessViewModel.messageAttributes))
+        result.append(NSAttributedString(string: intro, attributes: PurchaseViewModel.messageAttributes))
 
         let notificationInfo = NSLocalizedString("we'll send you a notification once it's ready for pickup.", comment: "Continuation for the purchase success message explaining that the user should get a notification in a few minutes")
-        result.append(NSAttributedString(string: notificationInfo, attributes: PurchaseSuccessViewModel.messageNotificationInfoAttributes))
+        result.append(NSAttributedString(string: notificationInfo, attributes: PurchaseViewModel.messageNotificationInfoAttributes))
 
         return result.copy() as! NSAttributedString
     }
@@ -65,7 +65,7 @@ public struct PurchaseSuccessViewModel {
         let messageFormat = NSLocalizedString("Wanna order more quickly in the future?\nAdd \"%@\" to Siri!", comment: "Message asking the user to add a previously purchased product shortcut to Siri")
         let message = String(format: messageFormat, product.name)
 
-        result.append(NSAttributedString(string: message, attributes: PurchaseSuccessViewModel.messageAttributes))
+        result.append(NSAttributedString(string: message, attributes: PurchaseViewModel.messageAttributes))
 
         return result.copy() as! NSAttributedString
     }
