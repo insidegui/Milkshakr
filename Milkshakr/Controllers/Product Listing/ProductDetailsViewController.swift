@@ -24,6 +24,8 @@ final class ProductDetailsViewController: UIViewController {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)
+
+        self.userActivity = viewModel.userActivity
     }
 
     required init?(coder aDecoder: NSCoder) {

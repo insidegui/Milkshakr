@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD01261A20D070EE00455C3A /* ProductViewModel+NSUserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */; };
+		DD01261D20D0713000455C3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01261C20D0713000455C3A /* Constants.swift */; };
 		DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */; };
 		DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE220CE029300EF5766 /* Ingredient.swift */; };
 		DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewModel+NSUserActivity.swift"; sourceTree = "<group>"; };
+		DD01261C20D0713000455C3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientGroup.swift; sourceTree = "<group>"; };
 		DD94ADE220CE029300EF5766 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD01261820D070DF00455C3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DD94ADEA20CE19EB00EF5766 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +235,7 @@
 		DDFC66E620CDB743000DD478 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD01261820D070DF00455C3A /* Extensions */,
 				DDFC66C720CDA21B000DD478 /* Model.swift */,
 				DDFC66C520CDA18B000DD478 /* Product.swift */,
 				DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */,
@@ -263,6 +276,7 @@
 				DDFC66CE20CDA942000DD478 /* Colors.swift */,
 				DDFC66F720CDBDAA000DD478 /* Metrics.swift */,
 				DDFC66F520CDBA07000DD478 /* Bundle+MilkshakrKit.swift */,
+				DD01261C20D0713000455C3A /* Constants.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -414,6 +428,7 @@
 				DDFC66F020CDB7FE000DD478 /* Colors.swift in Sources */,
 				DDFC66EE20CDB78F000DD478 /* Product.swift in Sources */,
 				DDFC66F820CDBDAA000DD478 /* Metrics.swift in Sources */,
+				DD01261D20D0713000455C3A /* Constants.swift in Sources */,
 				DDFC66EB20CDB76E000DD478 /* Store.swift in Sources */,
 				DDE10A9C20CF4A5B00D4EC39 /* PurchaseSuccessViewModel.swift in Sources */,
 				DDFC66F220CDB812000DD478 /* ProductView.swift in Sources */,
@@ -421,6 +436,7 @@
 				DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */,
 				DDFC66EC20CDB76E000DD478 /* ProductStore.swift in Sources */,
 				DDFC66F620CDBA07000DD478 /* Bundle+MilkshakrKit.swift in Sources */,
+				DD01261A20D070EE00455C3A /* ProductViewModel+NSUserActivity.swift in Sources */,
 				DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,6 +622,7 @@
 		DDFC66E320CDB73E000DD478 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -614,6 +633,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MilkshakrKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,6 +652,7 @@
 		DDFC66E420CDB73E000DD478 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -642,6 +663,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MilkshakrKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
