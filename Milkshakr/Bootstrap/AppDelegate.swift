@@ -30,5 +30,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
+        guard userActivityType == Constants.userActivityType else { return false }
+
+        flowController.goHome()
+        
+        return true
+    }
+
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard userActivity.activityType == Constants.userActivityType else { return false }
+
+        flowController.pushDetail(from: userActivity)
+
+        return true
+    }
+
 }
 

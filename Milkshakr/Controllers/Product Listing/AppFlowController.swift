@@ -33,6 +33,10 @@ final class AppFlowController: UIViewController {
         return controller
     }()
 
+    func goHome() {
+        rootNavigationController.popToRootViewController(animated: false)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -115,6 +119,17 @@ final class AppFlowController: UIViewController {
                 self?.pushDetail(for: product)
             case .error(let error):
                 NSLog("Invalid product identifier: \(identifier). \(error.localizedDescription)")
+            }
+        }
+    }
+
+    func pushDetail(from userActivity: NSUserActivity) {
+        store.fetch(from: userActivity) { [weak self] result in
+            switch result {
+            case .error(let error):
+                NSLog("Failed to parse user activity: \(String(describing: error))")
+            case .success(let product):
+                self?.pushDetail(for: product)
             }
         }
     }

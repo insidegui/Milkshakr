@@ -16,6 +16,10 @@ public extension ProductViewModel {
         static let identifier = "pid"
     }
 
+    var activityUserInfo: [String: String] {
+        return [Keys.identifier: product.identifier]
+    }
+
     var userActivity: NSUserActivity {
         let activity = NSUserActivity(activityType: Constants.userActivityType)
 
@@ -26,7 +30,8 @@ public extension ProductViewModel {
         }
 
         activity.title = title
-        activity.userInfo = [Keys.identifier: product.identifier]
+        activity.requiredUserInfoKeys = Set([Keys.identifier])
+        activity.userInfo = activityUserInfo
 
         let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         attributes.thumbnailData = image?.pngData()

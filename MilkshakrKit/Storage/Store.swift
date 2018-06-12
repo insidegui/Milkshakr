@@ -21,4 +21,5 @@ public protocol Store {
     func store(models: [Model], completion: @escaping StoreCollectionCompletionBlock)
     func fetchAll(completion: @escaping StoreCollectionCompletionBlock)
     func fetch(with identifier: String, completion: @escaping StoreCompletionBlock)
+    func fetch(from userActivity: NSUserActivity, completion: @escaping StoreCompletionBlock)
 }

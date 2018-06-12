@@ -357,6 +357,15 @@
 							com.apple.ApplePay = {
 								enabled = 1;
 							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
 						};
 					};
 					DDFC66D820CDB73E000DD478 = {

@@ -12,9 +12,12 @@ public final class ProductStore: Store {
 
     public enum FetchError: Error {
         case notFound(String)
+        case parse(String)
 
         var localizedDescription: String {
             switch self {
+            case .parse(let key):
+                return String(format: NSLocalizedString("Unable to parse key %@ from activity", comment: "Unable to parse user activity error"), key)
             case .notFound(let identifier):
                 return String(format: NSLocalizedString("Unable to find product with identifier %@", comment: "Product not found error"), identifier)
             }
@@ -38,18 +41,27 @@ public final class ProductStore: Store {
     }
 
     public func fetch(with identifier: String, completion: @escaping (Result<Product>) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + fakeNetworkingDelay) {
-            guard let model = self.backingStore.first(where: { $0.identifier == identifier }) else {
-                completion(.error(FetchError.notFound(identifier)))
-                return
-            }
-
-            completion(.success(model))
+        guard let model = backingStore.first(where: { $0.identifier == identifier }) else {
+            completion(.error(FetchError.notFound(identifier)))
+            return
         }
+
+        completion(.success(model))
     }
 
     public func store(models: [Product], completion: @escaping (Result<[Product]>) -> Void) {
         fatalError("Demo does not support storage")
+    }
+
+    public func fetch(from userActivity: NSUserActivity, completion: @escaping (Result<Product>) -> Void) {
+        let key = ProductViewModel.Keys.identifier
+
+        guard let productIdentifier = userActivity.userInfo?[key] as? String else {
+            completion(.error(FetchError.parse(key)))
+            return
+        }
+
+        fetch(with: productIdentifier, completion: completion)
     }
 
 }

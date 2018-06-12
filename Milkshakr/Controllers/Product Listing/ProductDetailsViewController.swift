@@ -24,8 +24,6 @@ final class ProductDetailsViewController: UIViewController {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)
-
-        self.userActivity = viewModel.userActivity
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -145,6 +143,8 @@ final class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        userActivity = viewModel.userActivity
+
         view.backgroundColor = .background
 
         view.addSubview(imageView)
@@ -173,6 +173,10 @@ final class ProductDetailsViewController: UIViewController {
         buttonBackground.topAnchor.constraint(equalTo: purchaseButton.topAnchor, constant: -Metrics.padding).isActive = true
 
         updateUI()
+    }
+
+    override func updateUserActivityState(_ activity: NSUserActivity) {
+        activity.addUserInfoEntries(from: viewModel.activityUserInfo)
     }
 
     private func updateUI() {
