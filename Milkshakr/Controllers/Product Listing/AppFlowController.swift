@@ -139,6 +139,8 @@ final class AppFlowController: UIViewController {
     func purchase(_ products: [Product]) {
         let flow = PurchaseFlowController(from: self, with: products)
 
+        flow.delegate = self
+
         flow.start()
 
         currentPurchaseFlow = flow
@@ -162,6 +164,17 @@ extension AppFlowController: ProductDetailsViewControllerDelegate {
 
     func productDetailsViewController(_ controller: ProductDetailsViewController, didSelectPurchase product: Product) {
         purchase([product])
+    }
+
+}
+
+// MARK: - PurchaseFlowControllerDelegate
+
+extension AppFlowController: PurchaseFlowControllerDelegate {
+
+    func purchaseFlowControllerDidPresentSuccessScreen(_ controller: PurchaseFlowController) {
+        // Go back to the home screen once the transition to the success screen is completed
+        rootNavigationController.popToRootViewController(animated: false)
     }
 
 }

@@ -10,20 +10,21 @@ import UIKit
 
 public struct PurchaseSuccessViewModel {
 
-    let product: Product
+    public let product: Product
 
-    init(product: Product) {
+    public init(product: Product) {
         self.product = product
     }
 
-    lazy var title: String = {
+    public var title: String {
         return NSLocalizedString("Success!", comment: "Title for purchase success screen")
-    }()
+    }
 
     private static let messageParagraphStyle: NSMutableParagraphStyle = {
         let style = NSMutableParagraphStyle()
 
         style.lineSpacing = Metrics.successDescriptionLineHeight
+        style.alignment = .center
 
         return style
     }()
@@ -44,7 +45,7 @@ public struct PurchaseSuccessViewModel {
         ]
     }()
 
-    lazy var attributedMessage: NSAttributedString = {
+    public var attributedMessage: NSAttributedString {
         let result = NSMutableAttributedString()
 
         let introFormat = NSLocalizedString("Your delicious %@ is being prepared, ", comment: "Introduction to purchase success message")
@@ -56,9 +57,9 @@ public struct PurchaseSuccessViewModel {
         result.append(NSAttributedString(string: notificationInfo, attributes: PurchaseSuccessViewModel.messageNotificationInfoAttributes))
 
         return result.copy() as! NSAttributedString
-    }()
+    }
 
-    lazy var attributedSiriMessage: NSAttributedString = {
+    public var attributedSiriMessage: NSAttributedString {
         let result = NSMutableAttributedString()
 
         let messageFormat = NSLocalizedString("Wanna order more quickly in the future?\nAdd \"%@\" to Siri!", comment: "Message asking the user to add a previously purchased product shortcut to Siri")
@@ -67,10 +68,10 @@ public struct PurchaseSuccessViewModel {
         result.append(NSAttributedString(string: message, attributes: PurchaseSuccessViewModel.messageAttributes))
 
         return result.copy() as! NSAttributedString
-    }()
+    }
 
-    lazy var addToSiriButtonTitle: String = {
+    public var addToSiriButtonTitle: String {
         return NSLocalizedString("Add to Siri", comment: "Title for the add to Siri button")
-    }()
+    }
 
 }

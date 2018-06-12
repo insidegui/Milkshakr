@@ -10,7 +10,13 @@ import UIKit
 import MilkshakrKit
 import PassKit
 
+protocol PurchaseFlowControllerDelegate: class {
+    func purchaseFlowControllerDidPresentSuccessScreen(_ controller: PurchaseFlowController)
+}
+
 final class PurchaseFlowController: NSObject {
+
+    weak var delegate: PurchaseFlowControllerDelegate?
 
     enum PurchaseError: Error {
         case applePayNotAvailable
@@ -60,7 +66,14 @@ final class PurchaseFlowController: NSObject {
     }
 
     func presentSuccessScreen() {
+        // only one product is supported for now
+        guard let product = products.first else { return }
 
+        let success = PurchaseSuccessViewController(viewModel: PurchaseSuccessViewModel(product: product))
+
+        presenter?.present(success, animated: true) { [unowned self] in
+            self.delegate?.purchaseFlowControllerDidPresentSuccessScreen(self)
+        }
     }
 
     func presentError(_ error: Error) {
@@ -68,6 +81,8 @@ final class PurchaseFlowController: NSObject {
     }
 
 }
+
+// MARK: - PKPaymentAuthorizationViewControllerDelegate
 
 extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
 
@@ -81,6 +96,16 @@ extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
         controller.dismiss(animated: true) { [unowned self] in
             self.presentSuccessScreen()
         }
+    }
+
+}
+
+// MARK: - PurchaseSuccessViewControllerDelegate
+
+extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
+
+    func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController) {
+
     }
 
 }
