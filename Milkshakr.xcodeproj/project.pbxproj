@@ -120,6 +120,25 @@
 			path = Definitions;
 			sourceTree = "<group>";
 		};
+		DDE10A9D20CF4CE500D4EC39 /* Product Listing */ = {
+			isa = PBXGroup;
+			children = (
+				DDFC66BC20CD9F9D000DD478 /* AppFlowController.swift */,
+				DDFC66BE20CD9FCA000DD478 /* ProductListViewController.swift */,
+				DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */,
+			);
+			path = "Product Listing";
+			sourceTree = "<group>";
+		};
+		DDE10A9E20CF4CEF00D4EC39 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */,
+				DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
 		DDFC669920CD9EAD000DD478 = {
 			isa = PBXGroup;
 			children = (
@@ -162,11 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				DDFC66D020CDAA73000DD478 /* Accessory */,
-				DDFC66BC20CD9F9D000DD478 /* AppFlowController.swift */,
-				DDFC66BE20CD9FCA000DD478 /* ProductListViewController.swift */,
-				DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */,
-				DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */,
-				DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */,
+				DDE10A9D20CF4CE500D4EC39 /* Product Listing */,
+				DDE10A9E20CF4CEF00D4EC39 /* Purchase */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

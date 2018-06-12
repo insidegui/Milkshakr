@@ -10,11 +10,6 @@ import UIKit
 import MilkshakrKit
 import PassKit
 
-protocol PurchaseFlowControllerDelegate: class {
-    func purchaseFlowDidFinish(with products: [Product])
-    func purchaseFlowDidFail(with error: Error)
-}
-
 final class PurchaseFlowController: NSObject {
 
     enum PurchaseError: Error {
@@ -28,7 +23,6 @@ final class PurchaseFlowController: NSObject {
         }
     }
 
-    weak var delegate: PurchaseFlowControllerDelegate?
     weak var presenter: UIViewController?
 
     var products: [Product] = []
@@ -56,13 +50,21 @@ final class PurchaseFlowController: NSObject {
         request.paymentSummaryItems = summaryItems + [totalItem]
 
         guard let paymentController = PKPaymentAuthorizationViewController(paymentRequest: request) else {
-            delegate?.purchaseFlowDidFail(with: PurchaseError.applePayNotAvailable)
+            self.presentError(PurchaseError.applePayNotAvailable)
             return
         }
 
         paymentController.delegate = self
 
         presenter?.present(paymentController, animated: true, completion: nil)
+    }
+
+    func presentSuccessScreen() {
+
+    }
+
+    func presentError(_ error: Error) {
+
     }
 
 }
@@ -77,7 +79,7 @@ extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
 
     func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
         controller.dismiss(animated: true) { [unowned self] in
-            self.delegate?.purchaseFlowDidFinish(with: self.products)
+            self.presentSuccessScreen()
         }
     }
 

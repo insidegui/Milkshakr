@@ -138,7 +138,6 @@ final class AppFlowController: UIViewController {
 
     func purchase(_ products: [Product]) {
         let flow = PurchaseFlowController(from: self, with: products)
-        flow.delegate = self
 
         flow.start()
 
@@ -163,20 +162,6 @@ extension AppFlowController: ProductDetailsViewControllerDelegate {
 
     func productDetailsViewController(_ controller: ProductDetailsViewController, didSelectPurchase product: Product) {
         purchase([product])
-    }
-
-}
-
-// MARK: -
-
-extension AppFlowController: PurchaseFlowControllerDelegate {
-
-    func purchaseFlowDidFinish(with products: [Product]) {
-        print("PURCHASE FINISHED")
-    }
-
-    func purchaseFlowDidFail(with error: Error) {
-        print("!! PURCHASE FAILED: \(error.localizedDescription)")
     }
 
 }
