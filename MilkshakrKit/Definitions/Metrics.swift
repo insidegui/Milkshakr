@@ -34,4 +34,11 @@ public struct Metrics {
 
     public static let purchaseButtonHeight: CGFloat = 48
 
+    public static let successIconWidth: CGFloat = 54
+    public static let successIconHeight: CGFloat = 40
+    public static let successTitleToDescriptionMargin: CGFloat = 18
+    public static let successDescriptionFontSize: CGFloat = 16
+    public static let successDescriptionFontWeight: UIFont.Weight = .medium
+    public static let successDescriptionLineHeight: CGFloat = 12
+
 }

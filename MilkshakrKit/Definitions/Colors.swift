@@ -21,6 +21,7 @@ private protocol ColorStore {
     static var background: UIColor { get }
     static var primaryText: UIColor { get }
     static var secondaryText: UIColor { get }
+    static var success: UIColor { get }
     static var paymentButtonStyle: PKPaymentButtonStyle { get }
 }
 
@@ -29,6 +30,7 @@ private struct LightTheme: ColorStore {
     static let primaryText: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     static let secondaryText: UIColor = #colorLiteral(red: 0.2666666667, green: 0.2666666667, blue: 0.2666666667, alpha: 1)
     static let paymentButtonStyle: PKPaymentButtonStyle = .black
+    static let success: UIColor = UIColor(red: 49.0 / 255.0, green: 175.0 / 255.0, blue: 145.0 / 255.0, alpha: 1.0)
 }
 
 extension UIColor: ColorStore {
@@ -53,6 +55,10 @@ extension UIColor: ColorStore {
 
     public static var paymentButtonStyle: PKPaymentButtonStyle {
         return colorStore.paymentButtonStyle
+    }
+
+    public static var success: UIColor {
+        return colorStore.success
     }
     
 }
