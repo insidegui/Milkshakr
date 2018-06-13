@@ -9,6 +9,7 @@
 import UIKit
 import MilkshakrKit
 import PassKit
+import IntentsUI
 
 protocol PurchaseFlowControllerDelegate: class {
     func purchaseFlowControllerDidPresentSuccessScreen(_ controller: PurchaseFlowController)
@@ -17,6 +18,8 @@ protocol PurchaseFlowControllerDelegate: class {
 final class PurchaseFlowController: NSObject {
 
     weak var delegate: PurchaseFlowControllerDelegate?
+
+    private var purchaseViewModel: PurchaseViewModel?
 
     enum PurchaseError: Error {
         case applePayNotAvailable
@@ -71,6 +74,9 @@ final class PurchaseFlowController: NSObject {
 
         let purchaseViewModel = PurchaseViewModel(product: product)
         let success = PurchaseSuccessViewController(viewModel: purchaseViewModel)
+        success.delegate = self
+
+        self.purchaseViewModel = purchaseViewModel
 
         presenter?.present(success, animated: true) { [unowned self] in
             self.delegate?.purchaseFlowControllerDidPresentSuccessScreen(self)
@@ -117,7 +123,28 @@ extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
 extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
 
     func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController) {
+        guard #available(iOS 12.0, *) else { return }
 
+        guard let viewModel = purchaseViewModel else { return }
+        guard let shortcut = INShortcut(intent: viewModel.intent) else { return }
+
+        let controller = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+        controller.delegate = self
+
+        presenter?.presentedViewController?.present(controller, animated: true, completion: nil)
+    }
+
+}
+
+@available(iOS 12.0, *)
+extension PurchaseFlowController: INUIAddVoiceShortcutViewControllerDelegate {
+
+    func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
+    func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
 }
