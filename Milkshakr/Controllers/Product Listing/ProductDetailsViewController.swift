@@ -19,9 +19,11 @@ final class ProductDetailsViewController: UIViewController {
     weak var delegate: ProductDetailsViewControllerDelegate?
 
     let viewModel: ProductViewModel
+    let purchaseImmediately: Bool
 
-    init(viewModel: ProductViewModel) {
+    init(viewModel: ProductViewModel, purchaseImmediately: Bool = false) {
         self.viewModel = viewModel
+        self.purchaseImmediately = purchaseImmediately
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -173,6 +175,21 @@ final class ProductDetailsViewController: UIViewController {
         buttonBackground.topAnchor.constraint(equalTo: purchaseButton.topAnchor, constant: -Metrics.padding).isActive = true
 
         updateUI()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        initiatePurchaseIfNeeded()
+    }
+
+    private var didInitiatePurchase = false
+
+    private func initiatePurchaseIfNeeded() {
+        guard purchaseImmediately, !didInitiatePurchase else { return }
+        didInitiatePurchase = true
+
+        purchase()
     }
 
     override func updateUserActivityState(_ activity: NSUserActivity) {

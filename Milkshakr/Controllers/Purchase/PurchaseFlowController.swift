@@ -82,6 +82,8 @@ final class PurchaseFlowController: NSObject {
         guard #available(iOS 12.0, *) else { return }
 
         viewModel.interaction.donate { error in
+            guard let error = error else { return }
+
             NSLog("Interaction donation error: \(String(describing: error))")
         }
     }

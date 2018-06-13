@@ -123,24 +123,28 @@ final class AppFlowController: UIViewController {
         }
     }
 
-    func pushDetail(from userActivity: NSUserActivity) {
+    func pushDetail(from userActivity: NSUserActivity, purchase: Bool = false) {
         store.fetch(from: userActivity) { [weak self] result in
             switch result {
             case .error(let error):
                 NSLog("Failed to parse user activity: \(String(describing: error))")
             case .success(let product):
-                self?.pushDetail(for: product)
+                self?.pushDetail(for: product, purchase: purchase)
             }
         }
     }
 
-    func pushDetail(for product: Product) {
-        let viewModel = ProductViewModel(product: product)
-        pushDetail(for: viewModel)
+    func purchase(from userActivity: NSUserActivity) {
+        pushDetail(from: userActivity, purchase: true)
     }
 
-    func pushDetail(for viewModel: ProductViewModel) {
-        let detailController = ProductDetailsViewController(viewModel: viewModel)
+    func pushDetail(for product: Product, purchase: Bool = false) {
+        let viewModel = ProductViewModel(product: product)
+        pushDetail(for: viewModel, purchase: purchase)
+    }
+
+    func pushDetail(for viewModel: ProductViewModel, purchase: Bool = false) {
+        let detailController = ProductDetailsViewController(viewModel: viewModel, purchaseImmediately: purchase)
 
         detailController.delegate = self
 

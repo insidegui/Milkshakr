@@ -38,7 +38,20 @@ final class DeepLinkHandler {
     func handle(_ userActivity: NSUserActivity) -> Bool {
         guard validActivityTypes.contains(userActivity.activityType) else { return false }
 
-        flowController.pushDetail(from: userActivity)
+        let isPurchaseIntent = translateIntentToUserInfo(in: userActivity)
+
+        flowController.pushDetail(from: userActivity, purchase: isPurchaseIntent)
+
+        return true
+    }
+
+    private func translateIntentToUserInfo(in userActivity: NSUserActivity) -> Bool {
+        guard #available(iOS 12.0, *),
+            let intent = userActivity.interaction?.intent as? OrderMilkshakeIntent,
+            let identifier = intent.product?.identifier
+        else { return false }
+
+        userActivity.addUserInfoEntries(from: [ProductViewModel.Keys.identifier: identifier])
 
         return true
     }

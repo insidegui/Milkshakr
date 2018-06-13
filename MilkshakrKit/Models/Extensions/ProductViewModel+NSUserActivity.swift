@@ -12,8 +12,8 @@ import CoreSpotlight
 
 public extension ProductViewModel {
 
-    struct Keys {
-        static let identifier = "pid"
+    public struct Keys {
+        public static let identifier = "pid"
     }
 
     var activityUserInfo: [String: String] {
