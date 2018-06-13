@@ -76,31 +76,3 @@ public final class ProductStore: Store {
     }
 
 }
-
-extension Ingredient {
-
-    static let cornSyrup = Ingredient(name: "Corn Syrup")
-    static let water = Ingredient(name: "Water")
-    static let milk = Ingredient(name: "Milk", isAllergen: true)
-    static let caramelColor = Ingredient(name: "Caramel Color")
-    static let naturalFlavor = Ingredient(name: "Natural Flavor")
-    static let salt = Ingredient(name: "Salt")
-    static let citricAcid = Ingredient(name: "Citric Acid")
-    static let potassiumSorbate = Ingredient(name: "Potassium Sorbate (Preservative)")
-    static let pectin = Ingredient(name: "Pectin")
-    static let sugar = Ingredient(name: "Sugar")
-    static let cream = Ingredient(name: "Cream")
-    static let nonfatMilk = Ingredient(name: "Nonfat Milk", isAllergen: true)
-    static let liquidSugar = Ingredient(name: "Liquid Sugar")
-
-}
-
-extension IngredientGroup {
-
-    static let demoGroups: [IngredientGroup] = [
-        IngredientGroup(name: "Ice Cream", disclaimer: "", ingredients: [.milk, .sugar, .cream, .cornSyrup, .naturalFlavor]),
-        IngredientGroup(name: "Syrup", disclaimer: "May contain small amounts of other shake flavors served at the restaurant.", ingredients: [.cornSyrup, .water, .caramelColor, .naturalFlavor, .salt, .citricAcid, .potassiumSorbate, .pectin, .sugar]),
-        IngredientGroup(name: "Whipped Cream", disclaimer: "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide).", ingredients: [.cream, .nonfatMilk, .liquidSugar])
-    ]
-
-}
