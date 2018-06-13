@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Ingredient {
+public struct Ingredient: Codable {
 
     public let name: String
     public let isAllergen: Bool

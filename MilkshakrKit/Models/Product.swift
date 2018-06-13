@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Product: Model {
+public struct Product: Model, Codable {
     public let identifier: String
     public let name: String
     public let description: String
