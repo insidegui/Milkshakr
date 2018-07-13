@@ -1,5 +1,6 @@
 # Milkshakr
-###A sample implementation of `NSUserActivity` and custom intent for Siri shortcuts
+
+### A sample implementation of `NSUserActivity` and custom intent for Siri shortcuts
 
 This project is the demo for my talk on Siri shortcuts.
 
