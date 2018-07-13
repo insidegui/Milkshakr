@@ -87,11 +87,7 @@ final class PurchaseFlowController: NSObject {
     private func donateInteraction(with viewModel: PurchaseViewModel) {
         guard #available(iOS 12.0, *) else { return }
 
-        viewModel.interaction.donate { error in
-            guard let error = error else { return }
-
-            NSLog("Interaction donation error: \(String(describing: error))")
-        }
+        // -> donate
     }
 
     func presentError(_ error: Error) {
@@ -123,15 +119,7 @@ extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
 extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
 
     func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController) {
-        guard #available(iOS 12.0, *) else { return }
-
-        guard let viewModel = purchaseViewModel else { return }
-        guard let shortcut = INShortcut(intent: viewModel.intent) else { return }
-
-        let controller = INUIAddVoiceShortcutViewController(shortcut: shortcut)
-        controller.delegate = self
-
-        presenter?.presentedViewController?.present(controller, animated: true, completion: nil)
+        // -> implementation
     }
 
 }

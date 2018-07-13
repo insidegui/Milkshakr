@@ -20,9 +20,7 @@ final class DeepLinkHandler {
 
         var activityTypes = [Constants.userActivityType]
 
-        if #available(iOS 12.0, *) {
-            activityTypes.append(String(describing: OrderMilkshakeIntent.self))
-        }
+        // -> append intent identifier
 
         validActivityTypes = activityTypes
     }

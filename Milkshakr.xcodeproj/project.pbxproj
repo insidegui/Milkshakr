@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		DD01261A20D070EE00455C3A /* ProductViewModel+NSUserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */; };
 		DD01261D20D0713000455C3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01261C20D0713000455C3A /* Constants.swift */; };
-		DD01261F20D0800400455C3A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; };
-		DD01262020D0800B00455C3A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		DD01262220D08AE500455C3A /* PurchaseViewModel+Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */; };
 		DD01262420D08CD300455C3A /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01262320D08CD300455C3A /* DeepLinkHandler.swift */; };
 		DD01262620D099A300455C3A /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = DD01262520D099A300455C3A /* demo.json */; };
@@ -70,7 +68,6 @@
 /* Begin PBXFileReference section */
 		DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewModel+NSUserActivity.swift"; sourceTree = "<group>"; };
 		DD01261C20D0713000455C3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DD01261E20D0800400455C3A /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseViewModel+Intent.swift"; sourceTree = "<group>"; };
 		DD01262320D08CD300455C3A /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		DD01262520D099A300455C3A /* demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
@@ -278,7 +275,6 @@
 			children = (
 				DD01262520D099A300455C3A /* demo.json */,
 				DDFC66C920CDA757000DD478 /* ProductImages.xcassets */,
-				DD01261E20D0800400455C3A /* Intents.intentdefinition */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -434,7 +430,6 @@
 				DD94ADE920CE15DA00EF5766 /* PurchaseFlowController.swift in Sources */,
 				DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */,
 				DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */,
-				DD01262020D0800B00455C3A /* Intents.intentdefinition in Sources */,
 				DDFC66CC20CDA841000DD478 /* LoadingViewController.swift in Sources */,
 				DDFC66BF20CD9FCA000DD478 /* ProductListViewController.swift in Sources */,
 				DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */,
@@ -455,7 +450,6 @@
 				DDFC66EE20CDB78F000DD478 /* Product.swift in Sources */,
 				DDFC66F820CDBDAA000DD478 /* Metrics.swift in Sources */,
 				DD01261D20D0713000455C3A /* Constants.swift in Sources */,
-				DD01261F20D0800400455C3A /* Intents.intentdefinition in Sources */,
 				DDFC66EB20CDB76E000DD478 /* Store.swift in Sources */,
 				DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */,
 				DDFC66F220CDB812000DD478 /* ProductView.swift in Sources */,
