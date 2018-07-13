@@ -34,13 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
-        return deepLinkHandler.prepareToHandle(type: userActivityType)
-    }
-
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        return deepLinkHandler.handle(userActivity)
-    }
+    // -> continueUserActivity
 
 }
 

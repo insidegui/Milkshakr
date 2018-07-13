@@ -65,14 +65,14 @@ public final class ProductStore: Store {
     }
 
     public func fetch(from userActivity: NSUserActivity, completion: @escaping (Result<Product>) -> Void) {
-        let key = ProductViewModel.Keys.identifier
-
-        guard let productIdentifier = userActivity.userInfo?[key] as? String else {
-            completion(.error(FetchError.parse(key)))
-            return
-        }
-
-        fetch(with: productIdentifier, completion: completion)
+//        let key = ProductViewModel.Keys.identifier
+//
+//        guard let productIdentifier = userActivity.userInfo?[key] as? String else {
+//            completion(.error(FetchError.parse(key)))
+//            return
+//        }
+//
+//        fetch(with: productIdentifier, completion: completion)
     }
 
 }

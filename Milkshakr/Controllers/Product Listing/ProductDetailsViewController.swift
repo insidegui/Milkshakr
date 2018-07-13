@@ -145,7 +145,7 @@ final class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userActivity = viewModel.userActivity
+        // -> set user activity
 
         view.backgroundColor = .background
 
@@ -192,9 +192,7 @@ final class ProductDetailsViewController: UIViewController {
         purchase()
     }
 
-    override func updateUserActivityState(_ activity: NSUserActivity) {
-        activity.addUserInfoEntries(from: viewModel.activityUserInfo)
-    }
+    // -> updateUserActivityState
 
     private func updateUI() {
         imageView.image = viewModel.image
