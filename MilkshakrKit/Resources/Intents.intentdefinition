@@ -9,7 +9,7 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>17F77</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>10L176w</string>
+	<string>10L201y</string>
 	<key>INIntentDefinitionToolsVersion</key>
 	<string>10.0</string>
 	<key>INIntents</key>
@@ -17,6 +17,8 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>order</string>
+			<key>INIntentDefaultImageName</key>
+			<string>strawberry_shake</string>
 			<key>INIntentDescription</key>
 			<string>Order a delicious milkshake</string>
 			<key>INIntentDescriptionID</key>
