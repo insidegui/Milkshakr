@@ -24,9 +24,7 @@ public extension PurchaseViewModel {
     var intent: OrderMilkshakeIntent {
         let result = OrderMilkshakeIntent()
 
-        let phraseFormat = NSLocalizedString("Order %@", comment: "Suggested phrase to order a specific type of milkshake")
-        result.suggestedInvocationPhrase = String(format: phraseFormat, product.name)
-
+        result.suggestedInvocationPhrase = NSString.deferredLocalizedIntentsString(with: "Order %@", product.name) as String
         result.product = product.intentObject
 
         return result
