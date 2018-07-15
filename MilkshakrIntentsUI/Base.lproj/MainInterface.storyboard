@@ -42,6 +42,7 @@
                                     <constraint firstAttribute="height" constant="54" id="d5O-R0-N8q"/>
                                     <constraint firstItem="IFu-eN-KoE" firstAttribute="centerY" secondItem="na2-ql-RJN" secondAttribute="centerY" id="jF3-29-P9I"/>
                                     <constraint firstItem="GD6-7S-fxe" firstAttribute="firstBaseline" secondItem="IFu-eN-KoE" secondAttribute="firstBaseline" id="sdX-uC-ZP5"/>
+                                    <constraint firstItem="GD6-7S-fxe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IFu-eN-KoE" secondAttribute="trailing" constant="16" id="xQF-Gb-nr9"/>
                                     <constraint firstItem="IFu-eN-KoE" firstAttribute="leading" secondItem="na2-ql-RJN" secondAttribute="leading" constant="22" id="ybM-4t-Bbt"/>
                                 </constraints>
                             </view>
