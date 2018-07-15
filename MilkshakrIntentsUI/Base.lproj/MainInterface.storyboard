@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentViewController" customModule="MilkshakrIntentsUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="234"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gpx-I2-1il">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="180"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="na2-ql-RJN">
+                                <rect key="frame" x="0.0" y="180" width="400" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vanilla Cone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFu-eN-KoE">
+                                        <rect key="frame" x="22" y="17.5" width="95.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US$9,90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD6-7S-fxe">
+                                        <rect key="frame" x="315.5" y="18" width="62.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GD6-7S-fxe" secondAttribute="trailing" constant="22" id="DeT-nL-1fo"/>
+                                    <constraint firstAttribute="height" constant="54" id="d5O-R0-N8q"/>
+                                    <constraint firstItem="IFu-eN-KoE" firstAttribute="centerY" secondItem="na2-ql-RJN" secondAttribute="centerY" id="jF3-29-P9I"/>
+                                    <constraint firstItem="GD6-7S-fxe" firstAttribute="firstBaseline" secondItem="IFu-eN-KoE" secondAttribute="firstBaseline" id="sdX-uC-ZP5"/>
+                                    <constraint firstItem="IFu-eN-KoE" firstAttribute="leading" secondItem="na2-ql-RJN" secondAttribute="leading" constant="22" id="ybM-4t-Bbt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="bottom" secondItem="na2-ql-RJN" secondAttribute="bottom" id="4dO-2k-HhH"/>
+                            <constraint firstItem="na2-ql-RJN" firstAttribute="top" secondItem="gpx-I2-1il" secondAttribute="bottom" id="JMM-SY-pug"/>
+                            <constraint firstItem="gpx-I2-1il" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" id="Ti5-EO-q8a"/>
+                            <constraint firstItem="na2-ql-RJN" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" id="Wzc-Uw-y6n"/>
+                            <constraint firstAttribute="trailing" secondItem="gpx-I2-1il" secondAttribute="trailing" id="hPR-tH-pJc"/>
+                            <constraint firstItem="gpx-I2-1il" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="ja0-JG-yUR"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="na2-ql-RJN" secondAttribute="trailing" id="nfg-sn-G9t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="234"/>
+                    <connections>
+                        <outlet property="imageView" destination="gpx-I2-1il" id="ChK-gb-ysy"/>
+                        <outlet property="priceLabel" destination="GD6-7S-fxe" id="ACn-or-25t"/>
+                        <outlet property="titleLabel" destination="IFu-eN-KoE" id="XTA-gM-IwZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.60000000000002" y="31.484257871064472"/>
+        </scene>
+    </scenes>
+</document>

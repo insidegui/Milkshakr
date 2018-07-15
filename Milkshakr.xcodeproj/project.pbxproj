@@ -21,6 +21,16 @@
 		DD94ADEC20CE19FA00EF5766 /* ApplePayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADEB20CE19FA00EF5766 /* ApplePayConfiguration.swift */; };
 		DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */; };
 		DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */; };
+		DDF5F28520FBC50F00C1F4C3 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */; };
+		DDF5F28E20FBC50F00C1F4C3 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF5F28D20FBC50F00C1F4C3 /* IntentsUI.framework */; };
+		DDF5F29120FBC50F00C1F4C3 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F29020FBC50F00C1F4C3 /* IntentViewController.swift */; };
+		DDF5F29420FBC50F00C1F4C3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */; };
+		DDF5F29820FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDF5F29B20FBC50F00C1F4C3 /* MilkshakrIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDF5F2A520FBC52600C1F4C3 /* MilkshakrKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */; };
+		DDF5F2A820FBC52E00C1F4C3 /* MilkshakrKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */; };
+		DDF5F2A920FBC53600C1F4C3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		DDF5F2AA20FBC53600C1F4C3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */; };
 		DDFC66AD20CD9EAE000DD478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */; };
 		DDFC66B020CD9EAE000DD478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFC66AE20CD9EAE000DD478 /* LaunchScreen.storyboard */; };
@@ -44,6 +54,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DDF5F29620FBC50F00C1F4C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDF5F28A20FBC50F00C1F4C3;
+			remoteInfo = MilkshakrIntentsUI;
+		};
+		DDF5F29920FBC50F00C1F4C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDF5F28120FBC50F00C1F4C3;
+			remoteInfo = MilkshakrIntents;
+		};
+		DDF5F2A320FBC52100C1F4C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDFC66D820CDB73E000DD478;
+			remoteInfo = MilkshakrKit;
+		};
+		DDF5F2A620FBC52A00C1F4C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDFC66D820CDB73E000DD478;
+			remoteInfo = MilkshakrKit;
+		};
 		DDFC66DE20CDB73E000DD478 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
@@ -54,6 +92,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DDF5F2A220FBC50F00C1F4C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DDF5F29820FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex in Embed App Extensions */,
+				DDF5F29B20FBC50F00C1F4C3 /* MilkshakrIntents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDFC66E520CDB73E000DD478 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +131,14 @@
 		DD94ADEB20CE19FA00EF5766 /* ApplePayConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayConfiguration.swift; sourceTree = "<group>"; };
 		DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessViewController.swift; sourceTree = "<group>"; };
 		DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
+		DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilkshakrIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		DDF5F28620FBC50F00C1F4C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilkshakrIntentsUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF5F28D20FBC50F00C1F4C3 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		DDF5F29020FBC50F00C1F4C3 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		DDF5F29320FBC50F00C1F4C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		DDF5F29520FBC50F00C1F4C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDFC66A220CD9EAD000DD478 /* Milkshakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milkshakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFC66AC20CD9EAE000DD478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +165,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DDF5F27F20FBC50F00C1F4C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF5F2A520FBC52600C1F4C3 /* MilkshakrKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDF5F28820FBC50F00C1F4C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF5F2A820FBC52E00C1F4C3 /* MilkshakrKit.framework in Frameworks */,
+				DDF5F28E20FBC50F00C1F4C3 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDFC669F20CD9EAD000DD478 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,11 +236,41 @@
 			path = Purchase;
 			sourceTree = "<group>";
 		};
+		DDF5F28320FBC50F00C1F4C3 /* MilkshakrIntents */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */,
+				DDF5F28620FBC50F00C1F4C3 /* Info.plist */,
+			);
+			path = MilkshakrIntents;
+			sourceTree = "<group>";
+		};
+		DDF5F28C20FBC50F00C1F4C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5F28D20FBC50F00C1F4C3 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDF5F28F20FBC50F00C1F4C3 /* MilkshakrIntentsUI */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5F29020FBC50F00C1F4C3 /* IntentViewController.swift */,
+				DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */,
+				DDF5F29520FBC50F00C1F4C3 /* Info.plist */,
+			);
+			path = MilkshakrIntentsUI;
+			sourceTree = "<group>";
+		};
 		DDFC669920CD9EAD000DD478 = {
 			isa = PBXGroup;
 			children = (
 				DDFC66A420CD9EAD000DD478 /* Milkshakr */,
 				DDFC66DA20CDB73E000DD478 /* MilkshakrKit */,
+				DDF5F28320FBC50F00C1F4C3 /* MilkshakrIntents */,
+				DDF5F28F20FBC50F00C1F4C3 /* MilkshakrIntentsUI */,
+				DDF5F28C20FBC50F00C1F4C3 /* Frameworks */,
 				DDFC66A320CD9EAD000DD478 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,6 +280,8 @@
 			children = (
 				DDFC66A220CD9EAD000DD478 /* Milkshakr.app */,
 				DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */,
+				DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */,
+				DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,6 +424,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDF5F2A120FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntents" */;
+			buildPhases = (
+				DDF5F27E20FBC50F00C1F4C3 /* Sources */,
+				DDF5F27F20FBC50F00C1F4C3 /* Frameworks */,
+				DDF5F28020FBC50F00C1F4C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDF5F2A420FBC52100C1F4C3 /* PBXTargetDependency */,
+			);
+			name = MilkshakrIntents;
+			productName = MilkshakrIntents;
+			productReference = DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDF5F2A020FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntentsUI" */;
+			buildPhases = (
+				DDF5F28720FBC50F00C1F4C3 /* Sources */,
+				DDF5F28820FBC50F00C1F4C3 /* Frameworks */,
+				DDF5F28920FBC50F00C1F4C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDF5F2A720FBC52A00C1F4C3 /* PBXTargetDependency */,
+			);
+			name = MilkshakrIntentsUI;
+			productName = MilkshakrIntentsUI;
+			productReference = DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DDFC66A120CD9EAD000DD478 /* Milkshakr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDFC66B420CD9EAE000DD478 /* Build configuration list for PBXNativeTarget "Milkshakr" */;
@@ -325,11 +468,14 @@
 				DDFC669F20CD9EAD000DD478 /* Frameworks */,
 				DDFC66A020CD9EAD000DD478 /* Resources */,
 				DDFC66E520CDB73E000DD478 /* Embed Frameworks */,
+				DDF5F2A220FBC50F00C1F4C3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				DDFC66DF20CDB73E000DD478 /* PBXTargetDependency */,
+				DDF5F29720FBC50F00C1F4C3 /* PBXTargetDependency */,
+				DDF5F29A20FBC50F00C1F4C3 /* PBXTargetDependency */,
 			);
 			name = Milkshakr;
 			productName = Milkshakr;
@@ -364,6 +510,12 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Guilherme Rambo";
 				TargetAttributes = {
+					DDF5F28120FBC50F00C1F4C3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					DDF5F28A20FBC50F00C1F4C3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					DDFC66A120CD9EAD000DD478 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
@@ -401,11 +553,28 @@
 			targets = (
 				DDFC66A120CD9EAD000DD478 /* Milkshakr */,
 				DDFC66D820CDB73E000DD478 /* MilkshakrKit */,
+				DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */,
+				DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DDF5F28020FBC50F00C1F4C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDF5F28920FBC50F00C1F4C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF5F29420FBC50F00C1F4C3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDFC66A020CD9EAD000DD478 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +596,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DDF5F27E20FBC50F00C1F4C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF5F2A920FBC53600C1F4C3 /* Intents.intentdefinition in Sources */,
+				DDF5F28520FBC50F00C1F4C3 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDF5F28720FBC50F00C1F4C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF5F2AA20FBC53600C1F4C3 /* Intents.intentdefinition in Sources */,
+				DDF5F29120FBC50F00C1F4C3 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDFC669E20CD9EAD000DD478 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +658,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DDF5F29720FBC50F00C1F4C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */;
+			targetProxy = DDF5F29620FBC50F00C1F4C3 /* PBXContainerItemProxy */;
+		};
+		DDF5F29A20FBC50F00C1F4C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */;
+			targetProxy = DDF5F29920FBC50F00C1F4C3 /* PBXContainerItemProxy */;
+		};
+		DDF5F2A420FBC52100C1F4C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
+			targetProxy = DDF5F2A320FBC52100C1F4C3 /* PBXContainerItemProxy */;
+		};
+		DDF5F2A720FBC52A00C1F4C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
+			targetProxy = DDF5F2A620FBC52A00C1F4C3 /* PBXContainerItemProxy */;
+		};
 		DDFC66DF20CDB73E000DD478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
@@ -479,6 +686,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDF5F29320FBC50F00C1F4C3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		DDFC66AE20CD9EAE000DD478 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -490,6 +705,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DDF5F29C20FBC50F00C1F4C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = MilkshakrIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDF5F29D20FBC50F00C1F4C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = MilkshakrIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DDF5F29E20FBC50F00C1F4C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = MilkshakrIntentsUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDF5F29F20FBC50F00C1F4C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = MilkshakrIntentsUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DDFC66B220CD9EAE000DD478 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -709,6 +1004,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DDF5F2A020FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntentsUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDF5F29E20FBC50F00C1F4C3 /* Debug */,
+				DDF5F29F20FBC50F00C1F4C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDF5F2A120FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDF5F29C20FBC50F00C1F4C3 /* Debug */,
+				DDF5F29D20FBC50F00C1F4C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDFC669D20CD9EAD000DD478 /* Build configuration list for PBXProject "Milkshakr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
