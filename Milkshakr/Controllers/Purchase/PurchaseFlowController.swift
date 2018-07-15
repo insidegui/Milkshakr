@@ -70,6 +70,16 @@ final class PurchaseFlowController: NSObject {
             self.delegate?.purchaseFlowControllerDidPresentSuccessScreen(self)
             self.donateInteraction(with: purchaseViewModel)
         }
+
+        registerPurchaseSuggestion()
+    }
+
+    private func registerPurchaseSuggestion() {
+        guard #available(iOS 12.0, *) else { return }
+        guard let intent = purchaseViewModel?.intent else { return }
+        guard let suggestion = INShortcut(intent: intent) else { return }
+
+        INVoiceShortcutCenter.shared.setShortcutSuggestions([suggestion])
     }
 
     private func donateInteraction(with viewModel: PurchaseViewModel) {
