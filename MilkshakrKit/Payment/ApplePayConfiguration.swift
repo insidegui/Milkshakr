@@ -9,14 +9,14 @@
 import Foundation
 import PassKit
 
-struct ApplePayConfiguration {
-    static let countryCode = "BR"
-    static let currencyCode = "BRL"
-    static let supportedNetworks: [PKPaymentNetwork] = [.visa, .masterCard]
-    static let merchantCapabilities: PKMerchantCapability = [.capability3DS]
-    static let merchantIdentifier = "merchant.br.com.guilhermerambo.milshakrdemo"
+public struct ApplePayConfiguration {
+    public static let countryCode = "BR"
+    public static let currencyCode = "BRL"
+    public static let supportedNetworks: [PKPaymentNetwork] = [.visa, .masterCard]
+    public static let merchantCapabilities: PKMerchantCapability = [.capability3DS]
+    public static let merchantIdentifier = "merchant.br.com.guilhermerambo.milshakrdemo"
 
-    static func configure(_ request: PKPaymentRequest) {
+    public static func configure(_ request: PKPaymentRequest) {
         request.countryCode = countryCode
         request.currencyCode = currencyCode
         request.supportedNetworks = supportedNetworks

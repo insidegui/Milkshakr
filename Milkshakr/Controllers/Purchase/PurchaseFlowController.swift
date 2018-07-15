@@ -44,19 +44,7 @@ final class PurchaseFlowController: NSObject {
     }
 
     func start() {
-        let request = PKPaymentRequest()
-
-        ApplePayConfiguration.configure(request)
-
-        let summaryItems: [PKPaymentSummaryItem] = products.map { product in
-            let effectivePrice = product.discountPrice ?? product.price
-            return PKPaymentSummaryItem(label: product.name, amount: NSDecimalNumber(decimal: effectivePrice))
-        }
-
-        let total: NSDecimalNumber = summaryItems.reduce(NSDecimalNumber(value: 0), { $0.adding($1.amount) })
-        let totalItem = PKPaymentSummaryItem(label: "Total", amount: total, type: .final)
-
-        request.paymentSummaryItems = summaryItems + [totalItem]
+        let request = PKPaymentRequest(with: products)
 
         guard let paymentController = PKPaymentAuthorizationViewController(paymentRequest: request) else {
             self.presentError(PurchaseError.applePayNotAvailable)
