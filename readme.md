@@ -17,4 +17,4 @@ The app also implements intents and intents UI extensions so you can finish a pu
 - [Introduction to Siri Shortcuts](https://developer.apple.com/wwdc18/211)
 - [Building for Voice with Siri Shortcuts](https://developer.apple.com/wwdc18/214)
 
-I recommend watching those sessions using the [WWDC app for macOS](/insidegui/WWDC).
+I recommend watching those sessions using the [WWDC app for macOS](https://github.com/insidegui/WWDC).
