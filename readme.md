@@ -8,6 +8,13 @@ The app also implements intents and intents UI extensions so you can finish a pu
 
 ![](./Screenshots/SideBySide.png)
 
-Notes and known issues:
+### Notes and known issues:
 
-- There are layout issues on iOS devices other than iPhone X
+- There are some layout issues on iOS devices other than iPhone X
+
+### References:
+
+- [Introduction to Siri Shortcuts](https://developer.apple.com/wwdc18/211)
+- [Building for Voice with Siri Shortcuts](https://developer.apple.com/wwdc18/214)
+
+I recommend watching those sessions using the [WWDC app for macOS](/insidegui/WWDC).
