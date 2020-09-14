@@ -517,6 +517,7 @@
 				TargetAttributes = {
 					DDF5F28120FBC50F00C1F4C3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
 								enabled = 1;
@@ -525,9 +526,11 @@
 					};
 					DDF5F28A20FBC50F00C1F4C3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 					};
 					DDFC66A120CD9EAD000DD478 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
 								enabled = 1;
@@ -545,6 +548,7 @@
 					};
 					DDFC66D820CDB73E000DD478 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -732,7 +736,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -753,7 +757,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -773,7 +777,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -793,7 +797,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -928,7 +932,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -949,7 +953,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -977,7 +981,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.MilkshakrKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1007,7 +1011,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.MilkshakrKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

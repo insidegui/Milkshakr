@@ -12,7 +12,7 @@ import CoreSpotlight
 
 public extension ProductViewModel {
 
-    public struct Keys {
+    struct Keys {
         public static let identifier = "pid"
     }
 
