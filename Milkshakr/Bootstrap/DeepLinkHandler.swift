@@ -40,7 +40,7 @@ final class DeepLinkHandler {
 
         let isPurchaseIntent = translateIntentToUserInfo(in: userActivity)
 
-        flowController.pushDetail(from: userActivity, purchase: isPurchaseIntent)
+        flowController.pushProductDetail(from: userActivity, purchase: isPurchaseIntent)
 
         return true
     }

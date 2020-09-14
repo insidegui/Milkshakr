@@ -1,5 +1,5 @@
 //
-//  AppFlowController.swift
+//  ProductListingFlowController.swift
 //  Milkshakr
 //
 //  Created by Guilherme Rambo on 10/06/18.
@@ -9,7 +9,7 @@
 import UIKit
 import MilkshakrKit
 
-final class AppFlowController: UIViewController {
+final class ProductListingFlowController: UIViewController {
 
     let store: ProductStore
 
@@ -17,6 +17,8 @@ final class AppFlowController: UIViewController {
         self.store = store
 
         super.init(nibName: nil, bundle: nil)
+
+        tabBarItem = UITabBarItem(title: "Shop", image: UIImage(systemName: "bag.fill"), selectedImage: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,11 +49,7 @@ final class AppFlowController: UIViewController {
     }
 
     private func installRootNavigationController() {
-        addChild(rootNavigationController)
-        rootNavigationController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        rootNavigationController.view.frame = view.bounds
-        view.addSubview(rootNavigationController.view)
-        rootNavigationController.didMove(toParent: self)
+        install(rootNavigationController)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -169,7 +167,7 @@ final class AppFlowController: UIViewController {
 
 // MARK: - ProductListViewControllerDelegate
 
-extension AppFlowController: ProductListViewControllerDelegate {
+extension ProductListingFlowController: ProductListViewControllerDelegate {
 
     func productListViewController(_ controller: ProductListViewController, didSelectViewModel viewModel: ProductViewModel) {
             pushDetail(for: viewModel)
@@ -179,7 +177,7 @@ extension AppFlowController: ProductListViewControllerDelegate {
 
 // MARK: - ProductDetailsViewControllerDelegate
 
-extension AppFlowController: ProductDetailsViewControllerDelegate {
+extension ProductListingFlowController: ProductDetailsViewControllerDelegate {
 
     func productDetailsViewController(_ controller: ProductDetailsViewController, didSelectPurchase product: Product) {
         purchase([product])
@@ -189,7 +187,7 @@ extension AppFlowController: ProductDetailsViewControllerDelegate {
 
 // MARK: - PurchaseFlowControllerDelegate
 
-extension AppFlowController: PurchaseFlowControllerDelegate {
+extension ProductListingFlowController: PurchaseFlowControllerDelegate {
 
     func purchaseFlowControllerDidPresentSuccessScreen(_ controller: PurchaseFlowController) {
         // Go back to the home screen once the transition to the success screen is completed

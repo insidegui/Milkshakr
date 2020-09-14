@@ -14,12 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private lazy var store: ProductStore = {
+    private lazy var productStore: ProductStore = {
         return ProductStore()
     }()
 
+    private lazy var accountStore: AccountStore = {
+        return AccountStore()
+    }()
+
     private lazy var flowController: AppFlowController = {
-        return AppFlowController(store: store)
+        AppFlowController(
+            accountStore: accountStore,
+            productStore: productStore
+        )
     }()
 
     private lazy var deepLinkHandler: DeepLinkHandler = {
