@@ -17,7 +17,7 @@ public extension ProductViewModel {
     }
 
     var activityUserInfo: [String: String] {
-        return [Keys.identifier: product.identifier]
+        return [Keys.identifier: product.id]
     }
 
     var userActivity: NSUserActivity {

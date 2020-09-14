@@ -8,6 +8,4 @@
 
 import Foundation
 
-public protocol Model {
-    var identifier: String { get }
-}
+public protocol Model: Identifiable { }

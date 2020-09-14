@@ -13,7 +13,7 @@ import Intents
 public extension Product {
 
     var intentObject: INObject {
-        return INObject(identifier: identifier, display: name)
+        return INObject(identifier: id, display: name)
     }
 
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Product: Model, Codable {
-    public let identifier: String
+    public let id: String
     public let name: String
     public let description: String
     public let imageName: String
@@ -27,7 +27,7 @@ public struct Product: Model, Codable {
                 isSoldOut: Bool,
                 ingredientGroups: [IngredientGroup])
     {
-        self.identifier = identifier
+        self.id = identifier
         self.name = name
         self.description = description
         self.imageName = imageName

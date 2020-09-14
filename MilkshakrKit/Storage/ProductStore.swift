@@ -52,7 +52,7 @@ public final class ProductStore: Store {
     }
 
     public func fetch(with identifier: String, completion: @escaping (Result<Product>) -> Void) {
-        guard let model = backingStore.first(where: { $0.identifier == identifier }) else {
+        guard let model = backingStore.first(where: { $0.id == identifier }) else {
             completion(.error(FetchError.notFound(identifier)))
             return
         }

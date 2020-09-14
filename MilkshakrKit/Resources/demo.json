@@ -1,1 +1,867 @@
-[{"price":12.99,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"B971115D-5026-49AC-AEE7-6C9FD2636A31","description":"Chocolate Shake featuring our deliciously creamy vanilla soft serve and chocolate syrup, topped with whipped topping. Available in Small, Medium, and Large.","imageName":"chocolate_shake","name":"Chocolate Shake"},{"price":18.98999999999999488,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"A962ADDD-EF64-41C5-BA39-872F123CF615","description":"Strawberry Shake made with creamy vanilla soft serve, blended with strawberry flavored deliciousness, topped with whipped topping. Available in Small, Medium, and Large.","imageName":"strawberry_shake","name":"Strawberry Shake"},{"price":8.99,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"2FBF0A98-32BB-439E-AED0-41A9CF67E41B","description":"The classic vanilla shake, made with our creamy vanilla soft serve, topped with whipped topping. Available in Small, Medium, and Large.","imageName":"vanilla_shake","name":"Vanilla Shake"},{"discountPrice":9.89,"price":14.99,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"FA9ED799-2F33-4BDC-8110-1E0606889D97","description":"Enjoy a treat made with sweet, creamy vanilla soft serve in a crispy cone.","imageName":"vanilla_cone","name":"Vanilla Cone"},{"price":18.9,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"5D022278-601C-485B-9DEA-8EE40B74714D","description":"A classic hot fudge sundae made with vanilla soft serve, smothered in chocolaty fudge sauce.","imageName":"hot_fudge_sundae","name":"Hot Fudge Sundae"},{"price":15.89,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"7F727CD6-AD38-41B3-AF6A-2F31932203A7","description":"Made from vanilla soft serve with colorful chocolate candies swirled in. Enjoy these classic M&M’S® desserts in Regular Size and Snack Size.","imageName":"mm_shake","name":"M&M’S® Shake"},{"price":2.99,"isSoldOut":true,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"D6D74B01-1363-4D07-A546-D1F51BC378C4","description":"A delightful dessert of creamy vanilla McDonald’s soft serve in a crispy mini cone.","imageName":"kiddie_cone","name":"Kiddie Cone"},{"price":23.99,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"9133E692-E16A-4FFD-BA1D-CFE777F95FC0","description":"A caramel sundae that combines cool and creamy vanilla soft serve with warm, rich, buttery caramel.","imageName":"hot_caramel_sundae","name":"Hot Caramel Sundae"},{"price":14.89,"isSoldOut":false,"ingredientGroups":[{"name":"Ice Cream","ingredients":[{"name":"Milk","isAllergen":true},{"name":"Sugar","isAllergen":false},{"name":"Cream","isAllergen":false},{"name":"Corn Syrup","isAllergen":false},{"name":"Natural Flavor","isAllergen":false}],"disclaimer":""},{"name":"Syrup","ingredients":[{"name":"Corn Syrup","isAllergen":false},{"name":"Water","isAllergen":false},{"name":"Caramel Color","isAllergen":false},{"name":"Natural Flavor","isAllergen":false},{"name":"Salt","isAllergen":false},{"name":"Citric Acid","isAllergen":false},{"name":"Potassium Sorbate (Preservative)","isAllergen":false},{"name":"Pectin","isAllergen":false},{"name":"Sugar","isAllergen":false}],"disclaimer":"May contain small amounts of other shake flavors served at the restaurant."},{"name":"Whipped Cream","ingredients":[{"name":"Cream","isAllergen":false},{"name":"Nonfat Milk","isAllergen":true},{"name":"Liquid Sugar","isAllergen":false}],"disclaimer":"Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."}],"identifier":"93283B71-1748-4622-94FB-94B3585F8F22","description":"Creamy vanilla soft serve topped with sliced strawberries in a sweet and tart strawberry topping.","imageName":"strawberry_sundae","name":"Strawberry Sundae"}]
+[
+    {
+        "price": 12.99,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "B971115D-5026-49AC-AEE7-6C9FD2636A31",
+        "description": "Chocolate Shake featuring our deliciously creamy vanilla soft serve and chocolate syrup, topped with whipped topping. Available in Small, Medium, and Large.",
+        "imageName": "chocolate_shake",
+        "name": "Chocolate Shake"
+    },
+    {
+        "price": 18.98999999999999488,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "A962ADDD-EF64-41C5-BA39-872F123CF615",
+        "description": "Strawberry Shake made with creamy vanilla soft serve, blended with strawberry flavored deliciousness, topped with whipped topping. Available in Small, Medium, and Large.",
+        "imageName": "strawberry_shake",
+        "name": "Strawberry Shake"
+    },
+    {
+        "price": 8.99,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "2FBF0A98-32BB-439E-AED0-41A9CF67E41B",
+        "description": "The classic vanilla shake, made with our creamy vanilla soft serve, topped with whipped topping. Available in Small, Medium, and Large.",
+        "imageName": "vanilla_shake",
+        "name": "Vanilla Shake"
+    },
+    {
+        "discountPrice": 9.89,
+        "price": 14.99,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "FA9ED799-2F33-4BDC-8110-1E0606889D97",
+        "description": "Enjoy a treat made with sweet, creamy vanilla soft serve in a crispy cone.",
+        "imageName": "vanilla_cone",
+        "name": "Vanilla Cone"
+    },
+    {
+        "price": 18.9,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "5D022278-601C-485B-9DEA-8EE40B74714D",
+        "description": "A classic hot fudge sundae made with vanilla soft serve, smothered in chocolaty fudge sauce.",
+        "imageName": "hot_fudge_sundae",
+        "name": "Hot Fudge Sundae"
+    },
+    {
+        "price": 15.89,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "7F727CD6-AD38-41B3-AF6A-2F31932203A7",
+        "description": "Made from vanilla soft serve with colorful chocolate candies swirled in. Enjoy these classic M&M’S® desserts in Regular Size and Snack Size.",
+        "imageName": "mm_shake",
+        "name": "M&M’S® Shake"
+    },
+    {
+        "price": 2.99,
+        "isSoldOut": true,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "D6D74B01-1363-4D07-A546-D1F51BC378C4",
+        "description": "A delightful dessert of creamy vanilla McDonald’s soft serve in a crispy mini cone.",
+        "imageName": "kiddie_cone",
+        "name": "Kiddie Cone"
+    },
+    {
+        "price": 23.99,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "9133E692-E16A-4FFD-BA1D-CFE777F95FC0",
+        "description": "A caramel sundae that combines cool and creamy vanilla soft serve with warm, rich, buttery caramel.",
+        "imageName": "hot_caramel_sundae",
+        "name": "Hot Caramel Sundae"
+    },
+    {
+        "price": 14.89,
+        "isSoldOut": false,
+        "ingredientGroups": [
+            {
+                "name": "Ice Cream",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": ""
+            },
+            {
+                "name": "Syrup",
+                "ingredients": [
+                    {
+                        "name": "Corn Syrup",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Water",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Caramel Color",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Natural Flavor",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Salt",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Citric Acid",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Potassium Sorbate (Preservative)",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Pectin",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "May contain small amounts of other shake flavors served at the restaurant."
+            },
+            {
+                "name": "Whipped Cream",
+                "ingredients": [
+                    {
+                        "name": "Cream",
+                        "isAllergen": false
+                    },
+                    {
+                        "name": "Nonfat Milk",
+                        "isAllergen": true
+                    },
+                    {
+                        "name": "Liquid Sugar",
+                        "isAllergen": false
+                    }
+                ],
+                "disclaimer": "Contains 2% or Less: Mono and Diglycerides, Natural Flavors, Carrageenan. Whipping Propellant (Nitrous Oxide)."
+            }
+        ],
+        "id": "93283B71-1748-4622-94FB-94B3585F8F22",
+        "description": "Creamy vanilla soft serve topped with sliced strawberries in a sweet and tart strawberry topping.",
+        "imageName": "strawberry_sundae",
+        "name": "Strawberry Sundae"
+    }
+]
