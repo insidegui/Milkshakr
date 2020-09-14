@@ -43,6 +43,9 @@ public final class ProductTableViewCell: UITableViewCell {
     }
 
     private func buildUI() {
+        clipsToBounds = false
+        contentView.clipsToBounds = false
+        
         productView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(productView)
 

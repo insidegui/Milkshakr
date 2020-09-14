@@ -43,7 +43,7 @@ final class PurchaseSuccessViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let l = UILabel()
 
-        l.font = UIFont.systemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.largeTitleFontWeight)
+        l.font = UIFont.mskRoundedSystemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.largeTitleFontWeight)
         l.numberOfLines = 1
         l.lineBreakMode = .byTruncatingTail
         l.translatesAutoresizingMaskIntoConstraints = false
@@ -113,7 +113,7 @@ final class PurchaseSuccessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .background
 
         buildUI()
         updateUI()

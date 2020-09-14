@@ -30,12 +30,30 @@ public class ProductView: UIView {
         buildUI()
     }
 
-    private lazy var imageView: UIImageView = {
-        let v = UIImageView()
+    private lazy var imageContainer: UIView = {
+        let v = UIView()
 
         v.heightAnchor.constraint(equalToConstant: Metrics.productImageHeight).isActive = true
         v.translatesAutoresizingMaskIntoConstraints = false
         v.setContentCompressionResistancePriority(.required, for: .vertical)
+        v.addSubview(imageView)
+        v.layer.cornerCurve = imageView.layer.cornerCurve
+        v.layer.cornerRadius = imageView.layer.cornerRadius
+        v.layer.shadowOpacity = 0.23
+        v.layer.shadowRadius = 8
+        v.layer.shadowColor = UIColor.black.cgColor
+        v.layer.shadowOffset = CGSize(width: -1, height: -1)
+
+        return v
+    }()
+
+    private lazy var imageView: UIImageView = {
+        let v = UIImageView()
+
+        v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        v.layer.cornerCurve = .continuous
+        v.layer.cornerRadius = 16
+        v.clipsToBounds = true
 
         return v
     }()
@@ -43,7 +61,7 @@ public class ProductView: UIView {
     private lazy var titleLabel: UILabel = {
         let l = UILabel()
 
-        l.font = UIFont.systemFont(ofSize: Metrics.titleFontSize, weight: Metrics.titleFontWeight)
+        l.font = UIFont.mskRoundedSystemFont(ofSize: Metrics.titleFontSize, weight: Metrics.titleFontWeight)
         l.textColor = .primaryText
         l.numberOfLines = 1
         l.lineBreakMode = .byTruncatingTail
@@ -55,7 +73,7 @@ public class ProductView: UIView {
     private lazy var priceLabel: UILabel = {
         let l = UILabel()
 
-        l.font = UIFont.systemFont(ofSize: Metrics.priceFontSize, weight: Metrics.priceFontWeight)
+        l.font = UIFont.mskRoundedSystemFont(ofSize: Metrics.priceFontSize, weight: Metrics.priceFontWeight)
         l.textAlignment = .right
         l.textColor = .primaryText
         l.numberOfLines = 1
@@ -77,22 +95,22 @@ public class ProductView: UIView {
     }()
 
     private func buildUI() {
-        addSubview(imageView)
+        addSubview(imageContainer)
         addSubview(titleLabel)
         addSubview(priceLabel)
         addSubview(subtitleLabel)
 
-        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        imageContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        imageContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        imageContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
         titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.smallPadding).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: imageContainer.bottomAnchor, constant: Metrics.smallPadding).isActive = true
 
         priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         priceLabel.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor).isActive = true
 
-        titleLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor, constant: Metrics.padding).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor, constant: -Metrics.padding).isActive = true
 
         subtitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
         subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true

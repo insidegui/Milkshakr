@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        configureAppearance()
+
         window = UIWindow()
         window?.rootViewController = flowController
         window?.makeKeyAndVisible()
@@ -44,3 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - Appearance
+
+fileprivate extension AppDelegate {
+    func configureAppearance() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font: UIFont.mskRoundedSystemFont(ofSize: 36, weight: .bold)
+        ]
+    }
+}

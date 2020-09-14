@@ -25,21 +25,23 @@ private protocol ColorStore {
     static var paymentButtonStyle: PKPaymentButtonStyle { get }
 }
 
-private struct LightTheme: ColorStore {
-    static let background: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    static let primaryText: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    static let secondaryText: UIColor = #colorLiteral(red: 0.2666666667, green: 0.2666666667, blue: 0.2666666667, alpha: 1)
-    static let paymentButtonStyle: PKPaymentButtonStyle = .black
+private struct SystemTheme: ColorStore {
+    static let background: UIColor = .systemBackground
+    static let primaryText: UIColor = .label
+    static let secondaryText: UIColor = .secondaryLabel
+    static var paymentButtonStyle: PKPaymentButtonStyle {
+        if #available(iOS 14.0, *) {
+            return .automatic
+        } else {
+            return .black
+        }
+    }
     static let success: UIColor = UIColor(red: 49.0 / 255.0, green: 175.0 / 255.0, blue: 145.0 / 255.0, alpha: 1.0)
 }
 
 extension UIColor: ColorStore {
 
-    private static var colorStore: ColorStore.Type {
-        switch Theme.current {
-        case .light: return LightTheme.self
-        }
-    }
+    private static var colorStore: ColorStore.Type { SystemTheme.self }
 
     public static var background: UIColor {
         return colorStore.background

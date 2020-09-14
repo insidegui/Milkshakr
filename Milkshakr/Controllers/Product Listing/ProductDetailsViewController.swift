@@ -44,7 +44,7 @@ final class ProductDetailsViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let l = UILabel()
 
-        l.font = UIFont.systemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.largeTitleFontWeight)
+        l.font = UIFont.mskRoundedSystemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.largeTitleFontWeight)
         l.numberOfLines = 1
         l.lineBreakMode = .byTruncatingTail
 
@@ -54,7 +54,7 @@ final class ProductDetailsViewController: UIViewController {
     private lazy var ingredientsTitleLabel: UILabel = {
         let l = UILabel()
 
-        l.font = UIFont.systemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.largeTitleFontWeight)
+        l.font = UIFont.mskRoundedSystemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.largeTitleFontWeight)
         l.numberOfLines = 1
         l.lineBreakMode = .byTruncatingTail
 

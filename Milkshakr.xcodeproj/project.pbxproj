@@ -18,6 +18,7 @@
 		DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE220CE029300EF5766 /* Ingredient.swift */; };
 		DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */; };
 		DD94ADE920CE15DA00EF5766 /* PurchaseFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */; };
+		DDAB24BA250FCA0100C392F1 /* UIFont+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB24B9250FCA0100C392F1 /* UIFont+Rounded.swift */; };
 		DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */; };
 		DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */; };
 		DDF5F28520FBC50F00C1F4C3 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */; };
@@ -129,6 +130,7 @@
 		DD94ADE220CE029300EF5766 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseFlowController.swift; sourceTree = "<group>"; };
+		DDAB24B9250FCA0100C392F1 /* UIFont+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounded.swift"; sourceTree = "<group>"; };
 		DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessViewController.swift; sourceTree = "<group>"; };
 		DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 		DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilkshakrIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,14 @@
 			children = (
 				DD01261920D070EE00455C3A /* ProductViewModel+NSUserActivity.swift */,
 				DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDAB24B8250FC9F600C392F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB24B9250FCA0100C392F1 /* UIFont+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 		DDFC66DA20CDB73E000DD478 /* MilkshakrKit */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB24B8250FC9F600C392F1 /* Extensions */,
 				DDF5F2AC20FBD3F400C1F4C3 /* Payment */,
 				DDFC66F120CDB80C000DD478 /* Views */,
 				DDFC66EF20CDB7F4000DD478 /* Definitions */,
@@ -648,6 +659,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDAB24BA250FCA0100C392F1 /* UIFont+Rounded.swift in Sources */,
 				DDFC66F420CDB891000DD478 /* ProductViewModel.swift in Sources */,
 				DD01262220D08AE500455C3A /* PurchaseViewModel+Intent.swift in Sources */,
 				DDFC66ED20CDB78F000DD478 /* Model.swift in Sources */,
@@ -853,7 +865,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -907,7 +919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -925,7 +937,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -933,7 +945,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -946,7 +958,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -954,7 +966,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -972,7 +984,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MilkshakrKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1002,7 +1014,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MilkshakrKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
