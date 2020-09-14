@@ -11,7 +11,7 @@ import UIKit
 class LoadingViewController: UIViewController {
 
     private lazy var activityIndicator: UIActivityIndicatorView = {
-        let v = UIActivityIndicatorView(style: .gray)
+        let v = UIActivityIndicatorView(style: .medium)
 
         v.translatesAutoresizingMaskIntoConstraints = false
 
