@@ -13,6 +13,9 @@ import Combine
 
 final class AccountHomeViewController: UIViewController {
 
+    var showOrderHistoryHandler: () -> Void = { }
+    var signOutHandler: () -> Void = { }
+
     let viewModel: AccountViewModel
 
     init(viewModel: AccountViewModel) {
@@ -62,10 +65,22 @@ final class AccountHomeViewController: UIViewController {
         return v
     }()
 
+    private lazy var optionsController: AccountOptionsViewController = {
+        AccountOptionsViewController(viewModel: viewModel, options: [
+            AccountMenuOption(title: "Order History", action: { [weak self] _ in
+                self?.showOrderHistoryHandler()
+            }),
+            AccountMenuOption(title: "Log Out", action: { [weak self] _ in
+                self?.signOutHandler()
+            })
+        ])
+    }()
+
     override func loadView() {
         view = UIView()
         view.backgroundColor = .background
 
+        install(optionsController)
         view.addSubview(signedOutView)
 
         NSLayoutConstraint.activate([
@@ -100,9 +115,11 @@ final class AccountHomeViewController: UIViewController {
 
     private func showSignedInState(with account: Account) {
         signedOutView.isHidden = true
+        optionsController.view.isHidden = false
     }
 
     private func showSignedOutState() {
+        optionsController.view.isHidden = true
         signedOutView.isHidden = false
     }
 

@@ -23,3 +23,7 @@ public protocol Store {
     func fetch(with identifier: String, completion: @escaping StoreCompletionBlock)
     func fetch(from userActivity: NSUserActivity, completion: @escaping StoreCompletionBlock)
 }
+
+public protocol DeletableStore: Store {
+    func delete(with identifier: String)
+}

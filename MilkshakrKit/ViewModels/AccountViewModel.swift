@@ -34,4 +34,12 @@ public final class AccountViewModel: ObservableObject {
         store.signInWithApple(from: presenter, completion: { })
     }
 
+    public func signOut() {
+        guard case .loggedIn(let account) = state else {
+            preconditionFailure("Can't sign out if not signed in")
+        }
+
+        store.delete(with: account.id)
+    }
+
 }

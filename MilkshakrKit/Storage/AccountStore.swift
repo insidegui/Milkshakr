@@ -9,7 +9,7 @@
 import Foundation
 import AuthenticationServices
 
-public final class AccountStore: NSObject, Store, ObservableObject {
+public final class AccountStore: NSObject, DeletableStore, ObservableObject {
 
     /// Returns the currently signed in account, if any.
     @Published public private(set) var signedInAccount: Account?
@@ -129,6 +129,11 @@ extension AccountStore: ASAuthorizationControllerPresentationContextProviding, A
         let alert = UIAlertController(title: "Sign In Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         signInWithApplePresenter?.present(alert, animated: true, completion: nil)
+    }
+
+    public func delete(with identifier: String) {
+        // not really checking if the identifier matches what we have, it's a demo after all...
+        _storedAccount = nil
     }
     
 }

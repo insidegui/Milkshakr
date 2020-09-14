@@ -27,7 +27,17 @@ final class AccountFlowController: UIViewController {
     }
 
     private lazy var homeController: AccountHomeViewController = {
-        AccountHomeViewController(viewModel: viewModel)
+        let c = AccountHomeViewController(viewModel: viewModel)
+
+        c.showOrderHistoryHandler = { [weak self] in
+            self?.showOrderHistory()
+        }
+
+        c.signOutHandler = { [weak self] in
+            self?.viewModel.signOut()
+        }
+
+        return c
     }()
 
     private lazy var ownedNavigationController: UINavigationController = {
@@ -43,6 +53,13 @@ final class AccountFlowController: UIViewController {
         view.backgroundColor = .background
 
         install(ownedNavigationController)
+    }
+
+    func showOrderHistory() {
+        #warning("TODO: Implement order history")
+        let c = UIViewController()
+        c.view.backgroundColor = .systemRed
+        ownedNavigationController.pushViewController(c, animated: true)
     }
 
 }
