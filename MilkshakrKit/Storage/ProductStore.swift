@@ -30,7 +30,7 @@ public final class ProductStore: Store {
 
     public typealias Model = Product
 
-    private let fakeNetworkingDelay: TimeInterval = 0.5
+    private let fakeNetworkingDelay: TimeInterval = 0.1
 
     private lazy var backingStore: [Product] = {
         guard let url = Bundle.milkshakrKit.url(forResource: "demo", withExtension: "json") else {
