@@ -31,6 +31,7 @@ public final class AccountStore: NSObject, Store, ObservableObject {
         set {
             guard let newValue = newValue else {
                 defaults.removeObject(forKey: #function)
+                signedInAccount = nil
                 return
             }
 
@@ -39,6 +40,7 @@ public final class AccountStore: NSObject, Store, ObservableObject {
             }
 
             defaults.set(data, forKey: #function)
+            signedInAccount = newValue
         }
     }
 
