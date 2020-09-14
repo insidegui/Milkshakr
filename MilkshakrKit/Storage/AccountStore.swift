@@ -50,6 +50,8 @@ public final class AccountStore: NSObject, Store, ObservableObject {
         self.defaults = defaults
 
         super.init()
+
+        signedInAccount = _storedAccount
     }
 
     public typealias Model = Account

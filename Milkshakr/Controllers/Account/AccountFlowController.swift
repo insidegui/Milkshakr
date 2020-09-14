@@ -8,13 +8,14 @@
 
 import UIKit
 import MilkshakrKit
+import SwiftUI
 
 final class AccountFlowController: UIViewController {
 
-    let store: AccountStore
+    let viewModel: AccountViewModel
 
     init(store: AccountStore) {
-        self.store = store
+        self.viewModel = AccountViewModel(store: store)
 
         super.init(nibName: nil, bundle: nil)
 
@@ -25,9 +26,23 @@ final class AccountFlowController: UIViewController {
         fatalError()
     }
 
+    private lazy var homeController: AccountHomeViewController = {
+        AccountHomeViewController(viewModel: viewModel)
+    }()
+
+    private lazy var ownedNavigationController: UINavigationController = {
+        let c = UINavigationController(rootViewController: homeController)
+
+        c.navigationBar.prefersLargeTitles = true
+
+        return c
+    }()
+
     override func loadView() {
         view = UIView()
         view.backgroundColor = .background
+
+        install(ownedNavigationController)
     }
 
 }
