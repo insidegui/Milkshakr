@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct IngredientGroup: Codable {
+public struct IngredientGroup: Codable, Hashable {
 
     public let name: String
     public let disclaimer: String

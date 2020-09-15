@@ -11,10 +11,12 @@ import MilkshakrKit
 
 final class ProductListingFlowController: UIViewController {
 
-    let store: ProductStore
+    let productStore: ProductStore
+    let accountStore: AccountStore
 
-    init(store: ProductStore) {
-        self.store = store
+    init(productStore: ProductStore, accountStore: AccountStore) {
+        self.productStore = productStore
+        self.accountStore = accountStore
 
         super.init(nibName: nil, bundle: nil)
 
@@ -61,7 +63,7 @@ final class ProductListingFlowController: UIViewController {
     private func loadProducts() {
         productListViewController.showLoadingIndicatorIfNeeded()
 
-        store.fetchAll { [weak self] result in
+        productStore.fetchAll { [weak self] result in
             switch result {
             case .error(let error):
                 fatalError("Demo mode should never return an error, but returned error: \(error.localizedDescription)")
@@ -111,7 +113,7 @@ final class ProductListingFlowController: UIViewController {
     func pushDetailForProduct(with identifier: String) {
         productListViewController.showLoadingIndicatorIfNeeded()
 
-        store.fetch(with: identifier) { [weak self] result in
+        productStore.fetch(with: identifier) { [weak self] result in
             switch result {
             case .success(let product):
                 self?.pushDetail(for: product)
@@ -122,7 +124,7 @@ final class ProductListingFlowController: UIViewController {
     }
 
     func pushDetail(from userActivity: NSUserActivity, purchase: Bool = false) {
-        store.fetch(from: userActivity) { [weak self] result in
+        productStore.fetch(from: userActivity) { [weak self] result in
             switch result {
             case .error(let error):
                 NSLog("Failed to parse user activity: \(String(describing: error))")
@@ -154,7 +156,7 @@ final class ProductListingFlowController: UIViewController {
     private var currentPurchaseFlow: PurchaseFlowController?
 
     func purchase(_ products: [Product]) {
-        let flow = PurchaseFlowController(from: self, with: products)
+        let flow = PurchaseFlowController(from: self, with: products, accountStore: accountStore)
 
         flow.delegate = self
 

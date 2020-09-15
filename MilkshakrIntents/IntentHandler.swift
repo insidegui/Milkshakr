@@ -62,7 +62,10 @@ class IntentHandler: INExtension, OrderMilkshakeIntentHandling {
 
         purchasedProduct = product
 
-        let request = PKPaymentRequest(with: [product])
+        var purchase = Purchase()
+        purchase.add(product, quantity: 1)
+
+        let request = PKPaymentRequest(with: purchase)
 
         os_log("Generated payment request, presenting payment controller", log: self.log, type: .info)
 
@@ -97,7 +100,7 @@ extension IntentHandler: PKPaymentAuthorizationControllerDelegate {
         let code: OrderMilkshakeIntentResponseCode = paymentSuccessfull ? .success : .failureRequiringAppLaunch
 
         let response = OrderMilkshakeIntentResponse(code: code, userActivity: viewModel.userActivity)
-        response.product = purchasedProduct?.intentObject
+        response.product = INObject(identifier: purchasedProduct!.id, display: purchasedProduct!.name)
 
         controller.dismiss { [weak self] in
             guard let `self` = self else { return }

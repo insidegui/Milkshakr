@@ -14,35 +14,8 @@ public final class AccountStore: NSObject, DeletableStore, ObservableObject {
     /// Returns the currently signed in account, if any.
     @Published public private(set) var signedInAccount: Account?
 
-    private var _storedAccount: Account? {
-        /*
-         ###### SAMPLE CODE WARNING ######
-         Never store a user's sensitive account data in user defaults,
-         this is just a sample project. In production code, you must
-         use the Keychain to store this type of information.
-         */
-        get {
-            guard let data = defaults.data(forKey: #function) else { return nil }
-            guard let account = try? PropertyListDecoder().decode(Account.self, from: data) else {
-                preconditionFailure("Failed to decode account model")
-            }
-            return account
-        }
-        set {
-            guard let newValue = newValue else {
-                defaults.removeObject(forKey: #function)
-                signedInAccount = nil
-                return
-            }
-
-            guard let data = try? PropertyListEncoder().encode(newValue) else {
-                preconditionFailure("Failed to encode account model")
-            }
-
-            defaults.set(data, forKey: #function)
-            signedInAccount = newValue
-        }
-    }
+    /// Returns the purchase history for the currently logged in user.
+    @Published public private(set) var purchases: [Purchase] = []
 
     private let defaults: UserDefaults
 
@@ -51,7 +24,7 @@ public final class AccountStore: NSObject, DeletableStore, ObservableObject {
 
         super.init()
 
-        signedInAccount = _storedAccount
+        loadLocalData()
     }
 
     public typealias Model = Account
@@ -73,6 +46,12 @@ public final class AccountStore: NSObject, DeletableStore, ObservableObject {
 
     public func fetch(from userActivity: NSUserActivity, completion: @escaping StoreCompletionBlock) {
         fatalError("Not supported")
+    }
+
+    // MARK: - Purchase History
+
+    public func store(_ purchase: Purchase) {
+        _purchaseHistoryStorage.append(purchase)
     }
 
     // MARK: - Sign in with Apple
@@ -136,4 +115,96 @@ extension AccountStore: ASAuthorizationControllerPresentationContextProviding, A
         _storedAccount = nil
     }
     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: - Local storage
+
+private extension AccountStore {
+
+    /*
+     ################ SAMPLE CODE WARNING ################
+     In a shipping app, NEVER store a user's sensitive account data in UserDefaults.
+     This is just a sample project. In production code, you must use the Keychain to store this type of information.
+     ################ SAMPLE CODE WARNING ################
+     */
+
+    var _storedAccount: Account? {
+        get {
+            guard let data = defaults.data(forKey: #function) else { return nil }
+            guard let account = try? PropertyListDecoder().decode(Account.self, from: data) else {
+                assertionFailure("Failed to decode account model")
+                return nil
+            }
+            return account
+        }
+        set {
+            defer {
+                // Delete purchase history when changing user accounts.
+                if newValue?.id != _storedAccount?.id {
+                    _purchaseHistoryStorage = []
+                }
+            }
+
+            guard let newValue = newValue else {
+                defaults.removeObject(forKey: #function)
+                signedInAccount = nil
+                return
+            }
+
+            guard let data = try? PropertyListEncoder().encode(newValue) else {
+                preconditionFailure("Failed to encode account model")
+            }
+
+            defaults.set(data, forKey: #function)
+            signedInAccount = newValue
+        }
+    }
+
+    var _purchaseHistoryStorage: [Purchase] {
+        get {
+            guard let data = defaults.data(forKey: #function) else { return [] }
+            guard let purchases = try? PropertyListDecoder().decode([Purchase].self, from: data) else {
+                assertionFailure("Failed to decode purchases")
+                return []
+            }
+            return purchases
+        }
+        set {
+            guard let data = try? PropertyListEncoder().encode(newValue) else {
+                preconditionFailure("Failed to encode account model")
+            }
+
+            defaults.set(data, forKey: #function)
+            loadPurchaseHistory(from: newValue)
+        }
+    }
+
+    private func loadLocalData() {
+        signedInAccount = _storedAccount
+        loadPurchaseHistory(from: _purchaseHistoryStorage)
+    }
+
+    private func loadPurchaseHistory(from list: [Purchase]) {
+        purchases = list.sorted(by: { $0.createdAt > $1.createdAt })
+    }
+
 }

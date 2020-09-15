@@ -19,8 +19,6 @@ final class PurchaseFlowController: NSObject {
 
     weak var delegate: PurchaseFlowControllerDelegate?
 
-    private var purchaseViewModel: PurchaseViewModel?
-
     enum PurchaseError: Error {
         case applePayNotAvailable
 
@@ -34,17 +32,19 @@ final class PurchaseFlowController: NSObject {
 
     weak var presenter: UIViewController?
 
-    var products: [Product] = []
+    let viewModel: PurchaseViewModel
+    let accountStore: AccountStore
 
-    init(from presenter: UIViewController, with products: [Product]) {
+    init(from presenter: UIViewController, with products: [Product], accountStore: AccountStore) {
         self.presenter = presenter
-        self.products = products
+        self.viewModel = PurchaseViewModel(products: products)
+        self.accountStore = accountStore
 
         super.init()
     }
 
     func start() {
-        let request = PKPaymentRequest(with: products)
+        let request = PKPaymentRequest(with: viewModel.purchase)
 
         guard let paymentController = PKPaymentAuthorizationViewController(paymentRequest: request) else {
             self.presentError(PurchaseError.applePayNotAvailable)
@@ -57,18 +57,14 @@ final class PurchaseFlowController: NSObject {
     }
 
     func presentSuccessScreen() {
-        // only one product is supported for now
-        guard let product = products.first else { return }
+        storePurchase()
 
-        let purchaseViewModel = PurchaseViewModel(product: product)
-        let success = PurchaseSuccessViewController(viewModel: purchaseViewModel)
+        let success = PurchaseSuccessViewController(viewModel: viewModel)
         success.delegate = self
-
-        self.purchaseViewModel = purchaseViewModel
 
         presenter?.present(success, animated: true) { [unowned self] in
             self.delegate?.purchaseFlowControllerDidPresentSuccessScreen(self)
-            self.donateInteraction(with: purchaseViewModel)
+            self.donateInteraction(with: viewModel)
         }
 
         registerPurchaseSuggestion()
@@ -76,8 +72,7 @@ final class PurchaseFlowController: NSObject {
 
     private func registerPurchaseSuggestion() {
         guard #available(iOS 12.0, *) else { return }
-        guard let intent = purchaseViewModel?.intent else { return }
-        guard let suggestion = INShortcut(intent: intent) else { return }
+        guard let suggestion = INShortcut(intent: viewModel.intent) else { return }
 
         INVoiceShortcutCenter.shared.setShortcutSuggestions([suggestion])
     }
@@ -94,6 +89,10 @@ final class PurchaseFlowController: NSObject {
 
     func presentError(_ error: Error) {
 
+    }
+
+    private func storePurchase() {
+        accountStore.store(viewModel.purchase)
     }
 
 }
@@ -123,7 +122,6 @@ extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
     func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController) {
         guard #available(iOS 12.0, *) else { return }
 
-        guard let viewModel = purchaseViewModel else { return }
         guard let shortcut = INShortcut(intent: viewModel.intent) else { return }
 
         let controller = INUIAddVoiceShortcutViewController(shortcut: shortcut)

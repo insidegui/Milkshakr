@@ -30,7 +30,7 @@ final class AppFlowController: UIViewController {
     }()
 
     private(set) lazy var productListingFlow: ProductListingFlowController = {
-        ProductListingFlowController(store: productStore)
+        ProductListingFlowController(productStore: productStore, accountStore: accountStore)
     }()
 
     private lazy var tabController: UITabBarController = {

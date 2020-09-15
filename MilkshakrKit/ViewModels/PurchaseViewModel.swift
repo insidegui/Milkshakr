@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Combine
 
-public struct PurchaseViewModel {
+public final class PurchaseViewModel: ObservableObject {
 
-    public let product: Product
+    @Published public private(set) var purchase: Purchase
 
     public init(product: Product) {
-        self.product = product
+        purchase = Purchase()
+        purchase.add(product, quantity: 1)
+    }
+
+    public init(products: [Product]) {
+        purchase = Purchase()
+        products.forEach({ purchase.add($0, quantity: 1) })
     }
 
     public var title: String {
@@ -49,7 +56,7 @@ public struct PurchaseViewModel {
         let result = NSMutableAttributedString()
 
         let introFormat = NSLocalizedString("Your delicious %@ is being prepared, ", comment: "Introduction to purchase success message")
-        let intro = String(format: introFormat, product.name)
+        let intro = String(format: introFormat, purchase.items[0].title)
 
         result.append(NSAttributedString(string: intro, attributes: PurchaseViewModel.messageAttributes))
 
@@ -63,7 +70,7 @@ public struct PurchaseViewModel {
         let result = NSMutableAttributedString()
 
         let messageFormat = NSLocalizedString("Wanna order more quickly in the future?\nAdd \"%@\" to Siri!", comment: "Message asking the user to add a previously purchased product shortcut to Siri")
-        let message = String(format: messageFormat, product.name)
+        let message = String(format: messageFormat, purchase.items[0].title)
 
         result.append(NSAttributedString(string: message, attributes: PurchaseViewModel.messageAttributes))
 

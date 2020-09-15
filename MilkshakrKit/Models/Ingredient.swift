@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Ingredient: Codable {
+public struct Ingredient: Codable, Hashable {
 
     public let name: String
     public let isAllergen: Bool
