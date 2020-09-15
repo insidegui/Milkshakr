@@ -199,6 +199,12 @@ private extension AccountStore {
     }
 
     private func loadLocalData() {
+        #if DEBUG
+        if UserDefaults.standard.bool(forKey: "MSKDeletePurchases") {
+            _purchaseHistoryStorage = []
+        }
+        #endif
+
         signedInAccount = _storedAccount
         loadPurchaseHistory(from: _purchaseHistoryStorage)
     }
@@ -208,3 +214,15 @@ private extension AccountStore {
     }
 
 }
+
+// MARK: - Preview Support
+
+#if DEBUG
+
+public extension AccountStore {
+    func preview_setPurchaseHistory(_ purchases: [Purchase]) {
+        self.purchases = purchases
+    }
+}
+
+#endif

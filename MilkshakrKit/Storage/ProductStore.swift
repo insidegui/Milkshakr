@@ -32,18 +32,7 @@ public final class ProductStore: Store {
 
     private let fakeNetworkingDelay: TimeInterval = 0.1
 
-    private lazy var backingStore: [Product] = {
-        guard let url = Bundle.milkshakrKit.url(forResource: "demo", withExtension: "json") else {
-            fatalError("Missing demo.json from MilkshakrKit resources")
-        }
-
-        do {
-            let data = try Data(contentsOf: url)
-            return try JSONDecoder().decode([Product].self, from: data)
-        } catch {
-            fatalError("Failed to load demo content: \(String(describing: error))")
-        }
-    }()
+    private lazy var backingStore = Bundle.milkshakrKit.loadDemoProducts()
 
     public func fetchAll(completion: @escaping (Result<[Product]>) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + fakeNetworkingDelay) {
@@ -75,4 +64,19 @@ public final class ProductStore: Store {
         fetch(with: productIdentifier, completion: completion)
     }
 
+}
+
+public extension Bundle {
+    func loadDemoProducts() -> [Product] {
+        guard let demoDataURL = url(forResource: "demo", withExtension: "json") else {
+            fatalError("Missing demo.json from MilkshakrKit resources")
+        }
+
+        do {
+            let data = try Data(contentsOf: demoDataURL)
+            return try JSONDecoder().decode([Product].self, from: data)
+        } catch {
+            fatalError("Failed to load demo content: \(String(describing: error))")
+        }
+    }
 }

@@ -15,12 +15,14 @@ public struct Purchase: Model, Hashable, Codable {
         public let title: String
         public let price: Decimal
         public let quantity: Int
+        public let linePrice: Decimal
 
         init(product: Product, quantity: Int) {
             self.id = product.id
             self.title = product.name
             self.price = product.price
             self.quantity = quantity
+            self.linePrice = Decimal(quantity) * product.price
         }
     }
 

@@ -56,10 +56,10 @@ final class AccountFlowController: UIViewController {
     }
 
     func showOrderHistory() {
-        #warning("TODO: Implement order history")
-        let c = UIViewController()
-        c.view.backgroundColor = .systemRed
-        ownedNavigationController.pushViewController(c, animated: true)
+        let controller = UIHostingController(rootView: OrderHistoryView().environmentObject(viewModel.store))
+        controller.title = "Order History"
+        controller.navigationItem.largeTitleDisplayMode = .never
+        ownedNavigationController.pushViewController(controller, animated: true)
     }
 
 }

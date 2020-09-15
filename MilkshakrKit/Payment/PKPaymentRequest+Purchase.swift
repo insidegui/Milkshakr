@@ -17,7 +17,7 @@ extension PKPaymentRequest {
         ApplePayConfiguration.configure(self)
 
         let summaryItems: [PKPaymentSummaryItem] = purchase.items.map { item in
-            return PKPaymentSummaryItem(label: item.title, amount: NSDecimalNumber(decimal: Decimal(item.quantity) * item.price))
+            return PKPaymentSummaryItem(label: item.title, amount: NSDecimalNumber(decimal: item.linePrice))
         }
 
         let total: NSDecimalNumber = NSDecimalNumber(decimal: purchase.total)

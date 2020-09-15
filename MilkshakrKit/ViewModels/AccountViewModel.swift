@@ -11,7 +11,7 @@ import Combine
 
 public final class AccountViewModel: ObservableObject {
 
-    let store: AccountStore
+    public let store: AccountStore
 
     private var cancellables = [AnyCancellable]()
 

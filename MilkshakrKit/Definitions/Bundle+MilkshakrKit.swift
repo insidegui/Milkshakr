@@ -10,7 +10,7 @@ import Foundation
 
 private final class _StubForBundleInit { }
 
-extension Bundle {
+public extension Bundle {
 
     static var milkshakrKit: Bundle {
         return Bundle(for: _StubForBundleInit.self)
