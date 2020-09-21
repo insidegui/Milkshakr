@@ -74,7 +74,10 @@ final class PurchaseFlowController: NSObject {
         guard #available(iOS 12.0, *) else { return }
         guard let suggestion = INShortcut(intent: viewModel.intent) else { return }
 
-        INVoiceShortcutCenter.shared.setShortcutSuggestions([suggestion])
+        // Register shortcut suggestions in the background to avoid UI hang on iOS 14.
+        DispatchQueue.global(qos: .utility).async {
+            INVoiceShortcutCenter.shared.setShortcutSuggestions([suggestion])
+        }
     }
 
     private func donateInteraction(with viewModel: PurchaseViewModel) {
