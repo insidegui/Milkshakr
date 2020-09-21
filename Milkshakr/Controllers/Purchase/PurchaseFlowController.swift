@@ -9,6 +9,7 @@
 import UIKit
 import MilkshakrKit
 import PassKit
+import Combine
 
 #if !APPCLIP
 import IntentsUI
@@ -38,13 +39,18 @@ final class PurchaseFlowController: NSObject {
     let viewModel: PurchaseViewModel
     let accountStore: AccountStore
 
+    private let account: AccountViewModel
+
     init(from presenter: UIViewController, with products: [Product], accountStore: AccountStore) {
         self.presenter = presenter
         self.viewModel = PurchaseViewModel(products: products)
         self.accountStore = accountStore
+        self.account = AccountViewModel(store: accountStore)
 
         super.init()
     }
+
+    private var cancellables = [AnyCancellable]()
 
     func start() {
         let request = PKPaymentRequest(with: viewModel.purchase)
@@ -62,10 +68,16 @@ final class PurchaseFlowController: NSObject {
     func presentSuccessScreen() {
         storePurchase()
 
-        let success = PurchaseSuccessViewController(viewModel: viewModel)
-        success.delegate = self
+        let successController = PurchaseSuccessViewController(viewModel: viewModel)
+        successController.delegate = self
 
-        presenter?.present(success, animated: true) { [unowned self] in
+        #if APPCLIP
+        account.$state.map({ !$0.isLoggedIn })
+            .assign(to: \.shouldShowSignUpMessage, on: successController)
+            .store(in: &cancellables)
+        #endif
+
+        presenter?.present(successController, animated: true) { [unowned self] in
             self.delegate?.purchaseFlowControllerDidPresentSuccessScreen(self)
             self.donateInteraction(with: viewModel)
         }
@@ -141,6 +153,10 @@ extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
 
     func purchaseSuccessViewControllerDidSelectEnableNotifications(_ controller: PurchaseSuccessViewController) {
         NotificationManager.shared.requestAuthorization(provisional: false)
+    }
+
+    func purchaseSuccessViewControllerDidSelectSignUp(_ controller: PurchaseSuccessViewController) {
+        account.signIn(from: controller)
     }
 
 }

@@ -18,6 +18,11 @@ public final class AccountViewModel: ObservableObject {
     public enum State {
         case loggedIn(Account)
         case loggedOut
+
+        public var isLoggedIn: Bool {
+            guard case .loggedIn = self else { return false }
+            return true
+        }
     }
 
     @Published public private(set) var state = State.loggedOut
