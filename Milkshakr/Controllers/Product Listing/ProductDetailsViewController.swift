@@ -65,7 +65,6 @@ final class ProductDetailsViewController: UIViewController {
         let l = UILabel()
 
         l.font = UIFont.systemFont(ofSize: Metrics.priceFontSize, weight: Metrics.priceFontWeight)
-        l.textAlignment = .right
         l.textColor = .primaryText
         l.numberOfLines = 1
         l.lineBreakMode = .byTruncatingTail
@@ -99,6 +98,7 @@ final class ProductDetailsViewController: UIViewController {
     private lazy var contentStack: UIStackView = {
         let v = UIStackView(arrangedSubviews: [
             titleLabel,
+            priceLabel,
             productDescriptionLabel,
             ingredientsTitleLabel,
             ingredientGroupsLabel
@@ -199,6 +199,7 @@ final class ProductDetailsViewController: UIViewController {
     private func updateUI() {
         imageView.image = viewModel.image
         titleLabel.text = viewModel.title
+        priceLabel.text = viewModel.formattedPrice
         productDescriptionLabel.attributedText = viewModel.attributedDescription
         ingredientsTitleLabel.text = NSLocalizedString("Ingredients", comment: "Ingredients (title for the list of ingredients)")
         ingredientGroupsLabel.attributedText = viewModel.attributedIngredientGroups
