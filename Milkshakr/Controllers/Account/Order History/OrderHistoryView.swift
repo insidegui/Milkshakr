@@ -31,6 +31,7 @@ struct OrderHistoryView: View {
     }
 }
 
+#if DEBUG
 struct OrderHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         OrderHistoryView()
@@ -62,3 +63,4 @@ fileprivate extension AccountStore {
         return store
     }
 }
+#endif
