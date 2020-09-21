@@ -71,7 +71,6 @@ final class PurchaseFlowController: NSObject {
     }
 
     private func registerPurchaseSuggestion() {
-        guard #available(iOS 12.0, *) else { return }
         guard let suggestion = INShortcut(intent: viewModel.intent) else { return }
 
         // Register shortcut suggestions in the background to avoid UI hang on iOS 14.
@@ -81,8 +80,6 @@ final class PurchaseFlowController: NSObject {
     }
 
     private func donateInteraction(with viewModel: PurchaseViewModel) {
-        guard #available(iOS 12.0, *) else { return }
-
         viewModel.interaction.donate { error in
             guard let error = error else { return }
 
@@ -123,8 +120,6 @@ extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
 extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
 
     func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController) {
-        guard #available(iOS 12.0, *) else { return }
-
         guard let shortcut = INShortcut(intent: viewModel.intent) else { return }
 
         let controller = INUIAddVoiceShortcutViewController(shortcut: shortcut)
