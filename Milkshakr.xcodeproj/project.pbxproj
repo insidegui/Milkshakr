@@ -45,6 +45,7 @@
 		DDAB24D22510F8DB00C392F1 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB24D12510F8DB00C392F1 /* Purchase.swift */; };
 		DDAB24D42511020000C392F1 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB24D32511020000C392F1 /* OrderHistoryView.swift */; };
 		DDAB24D7251102BC00C392F1 /* OrderHistoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB24D6251102BC00C392F1 /* OrderHistoryItemView.swift */; };
+		DDBAE44825190B2A009C1181 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBAE44725190B2A009C1181 /* UserDefaults+AppGroup.swift */; };
 		DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */; };
 		DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */; };
 		DDF5F28520FBC50F00C1F4C3 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */; };
@@ -213,6 +214,7 @@
 		DDAB24D12510F8DB00C392F1 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		DDAB24D32511020000C392F1 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
 		DDAB24D6251102BC00C392F1 /* OrderHistoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryItemView.swift; sourceTree = "<group>"; };
+		DDBAE44725190B2A009C1181 /* UserDefaults+AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppGroup.swift"; sourceTree = "<group>"; };
 		DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessViewController.swift; sourceTree = "<group>"; };
 		DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 		DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilkshakrIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +357,7 @@
 			children = (
 				DDAB24B9250FCA0100C392F1 /* UIFont+Rounded.swift */,
 				DDAB24C72510207E00C392F1 /* UIViewController+Child.swift */,
+				DDBAE44725190B2A009C1181 /* UserDefaults+AppGroup.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				DDFC66F420CDB891000DD478 /* ProductViewModel.swift in Sources */,
 				DD01262220D08AE500455C3A /* PurchaseViewModel+Intent.swift in Sources */,
 				DDAB24BC250FE4EA00C392F1 /* AccountStore.swift in Sources */,
+				DDBAE44825190B2A009C1181 /* UserDefaults+AppGroup.swift in Sources */,
 				DDFC66ED20CDB78F000DD478 /* Model.swift in Sources */,
 				DD65F8052518E7F900F76A61 /* NotificationManager.swift in Sources */,
 				DDFC66F020CDB7FE000DD478 /* Colors.swift in Sources */,

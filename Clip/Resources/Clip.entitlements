@@ -21,5 +21,9 @@
 	<array>
 		<string>$(AppIdentifierPrefix)br.com.guilhermerambo.Milkshakr</string>
 	</array>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.br.com.guilhermerambo.Milkshakr.Shared</string>
+	</array>
 </dict>
 </plist>

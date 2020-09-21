@@ -19,7 +19,7 @@ public final class AccountStore: NSObject, DeletableStore, ObservableObject {
 
     private let defaults: UserDefaults
 
-    public init(defaults: UserDefaults = .standard) {
+    public init(defaults: UserDefaults = .mskAppGroup) {
         self.defaults = defaults
 
         super.init()
