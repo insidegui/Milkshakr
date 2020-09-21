@@ -20,6 +20,7 @@ final class DeepLinkHandler {
 
         let activityTypes = [
             Constants.userActivityType,
+            NSUserActivityTypeBrowsingWeb,
             String(describing: OrderMilkshakeIntent.self)
         ]
 

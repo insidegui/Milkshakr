@@ -9,7 +9,10 @@
 import UIKit
 import MilkshakrKit
 import PassKit
+
+#if !APPCLIP
 import IntentsUI
+#endif
 
 protocol PurchaseFlowControllerDelegate: class {
     func purchaseFlowControllerDidPresentSuccessScreen(_ controller: PurchaseFlowController)
@@ -73,20 +76,24 @@ final class PurchaseFlowController: NSObject {
     }
 
     private func registerPurchaseSuggestion() {
+        #if !APPCLIP
         guard let suggestion = INShortcut(intent: viewModel.intent) else { return }
 
         // Register shortcut suggestions in the background to avoid UI hang on iOS 14.
         DispatchQueue.global(qos: .utility).async {
             INVoiceShortcutCenter.shared.setShortcutSuggestions([suggestion])
         }
+        #endif
     }
 
     private func donateInteraction(with viewModel: PurchaseViewModel) {
+        #if !APPCLIP
         viewModel.interaction.donate { error in
             guard let error = error else { return }
 
             NSLog("Interaction donation error: \(String(describing: error))")
         }
+        #endif
     }
 
     func presentError(_ error: Error) {
@@ -122,12 +129,14 @@ extension PurchaseFlowController: PKPaymentAuthorizationViewControllerDelegate {
 extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
 
     func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController) {
+        #if !APPCLIP
         guard let shortcut = INShortcut(intent: viewModel.intent) else { return }
 
         let controller = INUIAddVoiceShortcutViewController(shortcut: shortcut)
         controller.delegate = self
 
         presenter?.presentedViewController?.present(controller, animated: true, completion: nil)
+        #endif
     }
 
     func purchaseSuccessViewControllerDidSelectEnableNotifications(_ controller: PurchaseSuccessViewController) {
@@ -136,7 +145,7 @@ extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
 
 }
 
-@available(iOS 12.0, *)
+#if !APPCLIP
 extension PurchaseFlowController: INUIAddVoiceShortcutViewControllerDelegate {
 
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
@@ -148,3 +157,4 @@ extension PurchaseFlowController: INUIAddVoiceShortcutViewControllerDelegate {
     }
 
 }
+#endif

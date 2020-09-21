@@ -56,7 +56,7 @@ public final class ProductStore: Store {
     public func fetch(from userActivity: NSUserActivity, completion: @escaping (Result<Product>) -> Void) {
         let key = ProductViewModel.Keys.identifier
 
-        guard let productIdentifier = userActivity.userInfo?[key] as? String else {
+        guard let productIdentifier = userActivity.mskProductIdentifier else {
             completion(.error(FetchError.parse(key)))
             return
         }
@@ -78,5 +78,28 @@ public extension Bundle {
         } catch {
             fatalError("Failed to load demo content: \(String(describing: error))")
         }
+    }
+}
+
+// MARK: - User Activity Support
+
+fileprivate extension NSUserActivity {
+    var mskProductIdentifier: String? {
+        let key = ProductViewModel.Keys.identifier
+
+        if let explicitId = userInfo?[key] as? String {
+            return explicitId
+        } else if activityType == NSUserActivityTypeBrowsingWeb {
+            return webpageURL?.mskProductIdentifier
+        } else {
+            return nil
+        }
+    }
+}
+
+fileprivate extension URL {
+    var mskProductIdentifier: String? {
+        guard let items = URLComponents(url: self, resolvingAgainstBaseURL: false)?.queryItems else { return nil }
+        return items.first(where: { $0.name.lowercased() == "id" })?.value
     }
 }

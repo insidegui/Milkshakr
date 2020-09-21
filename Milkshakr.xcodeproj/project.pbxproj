@@ -15,6 +15,20 @@
 		DD01262420D08CD300455C3A /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01262320D08CD300455C3A /* DeepLinkHandler.swift */; };
 		DD01262620D099A300455C3A /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = DD01262520D099A300455C3A /* demo.json */; };
 		DD65F8052518E7F900F76A61 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65F8042518E7F900F76A61 /* NotificationManager.swift */; };
+		DD65F8162518F53B00F76A61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65F8152518F53B00F76A61 /* AppDelegate.swift */; };
+		DD65F8182518F53B00F76A61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65F8172518F53B00F76A61 /* SceneDelegate.swift */; };
+		DD65F81F2518F53C00F76A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65F81E2518F53C00F76A61 /* Assets.xcassets */; };
+		DD65F8222518F53C00F76A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65F8202518F53C00F76A61 /* LaunchScreen.storyboard */; };
+		DD65F8272518F53C00F76A61 /* Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = DD65F8132518F53B00F76A61 /* Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD65F8302518F55A00F76A61 /* MilkshakrKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */; };
+		DD65F8312518F55A00F76A61 /* MilkshakrKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD65F8482518F61200F76A61 /* AppClipFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65F8472518F61200F76A61 /* AppClipFlowController.swift */; };
+		DD65F84C2518F63F00F76A61 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66CB20CDA841000DD478 /* LoadingViewController.swift */; };
+		DD65F8502518F64400F76A61 /* ProductListingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66BC20CD9F9D000DD478 /* ProductListingFlowController.swift */; };
+		DD65F8542518F64700F76A61 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66BE20CD9FCA000DD478 /* ProductListViewController.swift */; };
+		DD65F8582518F64A00F76A61 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */; };
+		DD65F85C2518F64D00F76A61 /* PurchaseFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE820CE15DA00EF5766 /* PurchaseFlowController.swift */; };
+		DD65F8602518F64F00F76A61 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */; };
 		DD94ADE120CE027A00EF5766 /* IngredientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */; };
 		DD94ADE320CE029300EF5766 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE220CE029300EF5766 /* Ingredient.swift */; };
 		DD94ADE520CE0C2500EF5766 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */; };
@@ -68,6 +82,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD65F8252518F53C00F76A61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD65F8122518F53B00F76A61;
+			remoteInfo = Clip;
+		};
+		DD65F8322518F55A00F76A61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDFC66D820CDB73E000DD478;
+			remoteInfo = MilkshakrKit;
+		};
 		DDF5F29620FBC50F00C1F4C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
@@ -106,6 +134,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DD65F82B2518F53C00F76A61 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				DD65F8272518F53C00F76A61 /* Clip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD65F8342518F55A00F76A61 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD65F8312518F55A00F76A61 /* MilkshakrKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDF5F2A220FBC50F00C1F4C3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +189,14 @@
 		DD01262320D08CD300455C3A /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		DD01262520D099A300455C3A /* demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
 		DD65F8042518E7F900F76A61 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		DD65F8132518F53B00F76A61 /* Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD65F8152518F53B00F76A61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD65F8172518F53B00F76A61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DD65F81E2518F53C00F76A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD65F8212518F53C00F76A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD65F8232518F53C00F76A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD65F8242518F53C00F76A61 /* Clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Clip.entitlements; sourceTree = "<group>"; };
+		DD65F8472518F61200F76A61 /* AppClipFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipFlowController.swift; sourceTree = "<group>"; };
 		DD94ADE020CE027A00EF5766 /* IngredientGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientGroup.swift; sourceTree = "<group>"; };
 		DD94ADE220CE029300EF5766 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		DD94ADE420CE0C2500EF5766 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +252,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD65F8102518F53B00F76A61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD65F8302518F55A00F76A61 /* MilkshakrKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDF5F27F20FBC50F00C1F4C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +310,44 @@
 				DD65F8042518E7F900F76A61 /* NotificationManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DD65F8142518F53B00F76A61 /* Clip */ = {
+			isa = PBXGroup;
+			children = (
+				DD65F8402518F5D300F76A61 /* Resources */,
+				DD65F83C2518F5CA00F76A61 /* Bootstrap */,
+				DD65F83B2518F5C700F76A61 /* Controllers */,
+			);
+			path = Clip;
+			sourceTree = "<group>";
+		};
+		DD65F83B2518F5C700F76A61 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD65F8472518F61200F76A61 /* AppClipFlowController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DD65F83C2518F5CA00F76A61 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				DD65F8152518F53B00F76A61 /* AppDelegate.swift */,
+				DD65F8172518F53B00F76A61 /* SceneDelegate.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		DD65F8402518F5D300F76A61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD65F8232518F53C00F76A61 /* Info.plist */,
+				DD65F8242518F53C00F76A61 /* Clip.entitlements */,
+				DD65F81E2518F53C00F76A61 /* Assets.xcassets */,
+				DD65F8202518F53C00F76A61 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DDAB24B8250FC9F600C392F1 /* Extensions */ = {
@@ -338,6 +442,7 @@
 				DDFC66DA20CDB73E000DD478 /* MilkshakrKit */,
 				DDF5F28320FBC50F00C1F4C3 /* MilkshakrIntents */,
 				DDF5F28F20FBC50F00C1F4C3 /* MilkshakrIntentsUI */,
+				DD65F8142518F53B00F76A61 /* Clip */,
 				DDF5F28C20FBC50F00C1F4C3 /* Frameworks */,
 				DDFC66A320CD9EAD000DD478 /* Products */,
 			);
@@ -350,6 +455,7 @@
 				DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */,
 				DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */,
 				DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */,
+				DD65F8132518F53B00F76A61 /* Clip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,6 +606,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DD65F8122518F53B00F76A61 /* Clip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD65F8282518F53C00F76A61 /* Build configuration list for PBXNativeTarget "Clip" */;
+			buildPhases = (
+				DD65F80F2518F53B00F76A61 /* Sources */,
+				DD65F8102518F53B00F76A61 /* Frameworks */,
+				DD65F8112518F53B00F76A61 /* Resources */,
+				DD65F8342518F55A00F76A61 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD65F8332518F55A00F76A61 /* PBXTargetDependency */,
+			);
+			name = Clip;
+			productName = Clip;
+			productReference = DD65F8132518F53B00F76A61 /* Clip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
 		DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDF5F2A120FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntents" */;
@@ -545,6 +670,7 @@
 				DDFC66A020CD9EAD000DD478 /* Resources */,
 				DDFC66E520CDB73E000DD478 /* Embed Frameworks */,
 				DDF5F2A220FBC50F00C1F4C3 /* Embed App Extensions */,
+				DD65F82B2518F53C00F76A61 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
@@ -552,6 +678,7 @@
 				DDFC66DF20CDB73E000DD478 /* PBXTargetDependency */,
 				DDF5F29720FBC50F00C1F4C3 /* PBXTargetDependency */,
 				DDF5F29A20FBC50F00C1F4C3 /* PBXTargetDependency */,
+				DD65F8262518F53C00F76A61 /* PBXTargetDependency */,
 			);
 			name = Milkshakr;
 			productName = Milkshakr;
@@ -582,10 +709,13 @@
 		DDFC669A20CD9EAD000DD478 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Guilherme Rambo";
 				TargetAttributes = {
+					DD65F8122518F53B00F76A61 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					DDF5F28120FBC50F00C1F4C3 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1200;
@@ -640,11 +770,21 @@
 				DDFC66D820CDB73E000DD478 /* MilkshakrKit */,
 				DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */,
 				DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */,
+				DD65F8122518F53B00F76A61 /* Clip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD65F8112518F53B00F76A61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD65F8222518F53C00F76A61 /* LaunchScreen.storyboard in Resources */,
+				DD65F81F2518F53C00F76A61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDF5F28020FBC50F00C1F4C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -681,6 +821,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD65F80F2518F53B00F76A61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD65F8582518F64A00F76A61 /* ProductDetailsViewController.swift in Sources */,
+				DD65F8482518F61200F76A61 /* AppClipFlowController.swift in Sources */,
+				DD65F8162518F53B00F76A61 /* AppDelegate.swift in Sources */,
+				DD65F8182518F53B00F76A61 /* SceneDelegate.swift in Sources */,
+				DD65F8502518F64400F76A61 /* ProductListingFlowController.swift in Sources */,
+				DD65F8602518F64F00F76A61 /* PurchaseSuccessViewController.swift in Sources */,
+				DD65F8542518F64700F76A61 /* ProductListViewController.swift in Sources */,
+				DD65F85C2518F64D00F76A61 /* PurchaseFlowController.swift in Sources */,
+				DD65F84C2518F63F00F76A61 /* LoadingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDF5F27E20FBC50F00C1F4C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,6 +913,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DD65F8262518F53C00F76A61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD65F8122518F53B00F76A61 /* Clip */;
+			targetProxy = DD65F8252518F53C00F76A61 /* PBXContainerItemProxy */;
+		};
+		DD65F8332518F55A00F76A61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
+			targetProxy = DD65F8322518F55A00F76A61 /* PBXContainerItemProxy */;
+		};
 		DDF5F29720FBC50F00C1F4C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */;
@@ -785,6 +951,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DD65F8202518F53C00F76A61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD65F8212518F53C00F76A61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -804,6 +978,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DD65F8292518F53C00F76A61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Clip/Resources/Clip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = Clip/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-D APPCLIP";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DD65F82A2518F53C00F76A61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Clip/Resources/Clip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = Clip/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-D APPCLIP";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		DDF5F29C20FBC50F00C1F4C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1050,11 +1270,11 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MilkshakrKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1080,11 +1300,11 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MilkshakrKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1107,6 +1327,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD65F8282518F53C00F76A61 /* Build configuration list for PBXNativeTarget "Clip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD65F8292518F53C00F76A61 /* Debug */,
+				DD65F82A2518F53C00F76A61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDF5F2A020FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntentsUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
