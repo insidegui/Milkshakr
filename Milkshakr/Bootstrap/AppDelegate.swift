@@ -33,12 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return DeepLinkHandler(flowController)
     }()
 
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        NotificationManager.shared.setup()
+
+        return true
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureAppearance()
 
         window = UIWindow()
         window?.rootViewController = flowController
         window?.makeKeyAndVisible()
+
+        NotificationManager.shared.requestAuthorization()
 
         return true
     }

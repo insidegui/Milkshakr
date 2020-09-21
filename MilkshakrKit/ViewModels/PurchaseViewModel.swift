@@ -66,6 +66,11 @@ public final class PurchaseViewModel: ObservableObject {
         return result.copy() as! NSAttributedString
     }
 
+    public var readyMessage: String {
+        let messageFormat = NSLocalizedString("Your %@ is ready for pick up! Head over to the counter and ask the barista.", comment: "Purchase ready for pick up message")
+        return String(format: messageFormat, purchase.items[0].title)
+    }
+
     public var attributedSiriMessage: NSAttributedString {
         let result = NSMutableAttributedString()
 

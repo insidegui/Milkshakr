@@ -68,6 +68,8 @@ final class PurchaseFlowController: NSObject {
         }
 
         registerPurchaseSuggestion()
+
+        NotificationManager.shared.scheduleNotification(for: viewModel)
     }
 
     private func registerPurchaseSuggestion() {
@@ -126,6 +128,10 @@ extension PurchaseFlowController: PurchaseSuccessViewControllerDelegate {
         controller.delegate = self
 
         presenter?.presentedViewController?.present(controller, animated: true, completion: nil)
+    }
+
+    func purchaseSuccessViewControllerDidSelectEnableNotifications(_ controller: PurchaseSuccessViewController) {
+        NotificationManager.shared.requestAuthorization(provisional: false)
     }
 
 }

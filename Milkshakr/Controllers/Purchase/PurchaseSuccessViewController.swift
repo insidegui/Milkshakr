@@ -8,9 +8,11 @@
 
 import UIKit
 import MilkshakrKit
+import Combine
 
 protocol PurchaseSuccessViewControllerDelegate: class {
     func purchaseSuccessViewControllerDidSelectAddToSiri(_ controller: PurchaseSuccessViewController)
+    func purchaseSuccessViewControllerDidSelectEnableNotifications(_ controller: PurchaseSuccessViewController)
 }
 
 final class PurchaseSuccessViewController: UIViewController {
@@ -28,6 +30,8 @@ final class PurchaseSuccessViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    private var cancellables = [AnyCancellable]()
 
     private lazy var iconView: UIImageView = {
         let v = UIImageView()
@@ -61,6 +65,16 @@ final class PurchaseSuccessViewController: UIViewController {
         l.textAlignment = .center
 
         return l
+    }()
+
+    private lazy var notificationPermissionButton: UIButton = {
+        let b = UIButton(type: .system)
+
+        b.setTitle(NSLocalizedString("Enable Notifications", comment: "Button to let the user allow the app to send notifications"), for: .normal)
+        b.addTarget(self, action: #selector(enableNotifications), for: .touchUpInside)
+        b.translatesAutoresizingMaskIntoConstraints = false
+
+        return b
     }()
 
     private lazy var siriMessageLabel: UILabel = {
@@ -123,6 +137,7 @@ final class PurchaseSuccessViewController: UIViewController {
         view.addSubview(iconView)
         view.addSubview(titleLabel)
         view.addSubview(messageLabel)
+        view.addSubview(notificationPermissionButton)
         view.addSubview(siriMessageStack)
         view.addSubview(doneButton)
 
@@ -140,6 +155,10 @@ final class PurchaseSuccessViewController: UIViewController {
         messageLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
         messageLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
 
+        notificationPermissionButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: Metrics.smallPadding).isActive = true
+        notificationPermissionButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
+        notificationPermissionButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
+
         siriMessageStack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
         siriMessageStack.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
@@ -151,6 +170,15 @@ final class PurchaseSuccessViewController: UIViewController {
         messageLabel.attributedText = viewModel.attributedMessage
         siriMessageLabel.attributedText = viewModel.attributedSiriMessage
         addToSiriButton.setTitle(viewModel.addToSiriButtonTitle, for: .normal)
+
+        NotificationManager.shared.$canAskForNonProvisionalPermission
+            .map({ !$0 })
+            .assign(to: \.isHidden, on: notificationPermissionButton)
+            .store(in: &cancellables)
+    }
+
+    @objc private func enableNotifications() {
+        delegate?.purchaseSuccessViewControllerDidSelectEnableNotifications(self)
     }
 
 }
