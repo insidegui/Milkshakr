@@ -40,7 +40,11 @@ public final class NotificationManager: NSObject {
                 if settings.authorizationStatus == .denied {
                     self.canAskForNonProvisionalPermission = false
                 } else {
-                    self.canAskForNonProvisionalPermission = settings.alertSetting == .disabled
+                    if #available(iOS 14.0, *) {
+                        self.canAskForNonProvisionalPermission = settings.alertSetting == .disabled || settings.authorizationStatus == .ephemeral
+                    } else {
+                        self.canAskForNonProvisionalPermission = settings.alertSetting == .disabled
+                    }
                 }
             }
         }
