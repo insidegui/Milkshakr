@@ -19,4 +19,10 @@ public extension UIFont {
         return UIFont(descriptor: desc, size: size)
     }
 
+    static func configureNavBarFont() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font: UIFont.mskRoundedSystemFont(ofSize: 36, weight: .bold)
+        ]
+    }
+
 }

@@ -65,8 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 fileprivate extension AppDelegate {
     func configureAppearance() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [
-            .font: UIFont.mskRoundedSystemFont(ofSize: 36, weight: .bold)
-        ]
+        UIFont.configureNavBarFont()
     }
 }
