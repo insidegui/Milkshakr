@@ -241,7 +241,7 @@ final class PurchaseSuccessViewController: UIViewController {
     private func installSignUpMessage() {
         view.addSubview(signUpMessageStack)
 
-        signUpMessageStack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        signUpMessageStack.topAnchor.constraint(equalTo: notificationPermissionButton.bottomAnchor, constant: 32).isActive = true
 
         signUpMessageStack.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
         signUpMessageStack.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
