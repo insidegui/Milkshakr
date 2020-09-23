@@ -82,6 +82,7 @@ final class PurchaseFlowController: NSObject {
     }
 
     private func donateInteraction(with viewModel: PurchaseViewModel) {
+        // intent
         viewModel.interaction.donate { error in
             guard let error = error else { return }
 
