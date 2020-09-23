@@ -12,8 +12,8 @@ import PassKit
 public struct ApplePayConfiguration {
     public static let countryCode = "BR"
     public static let currencyCode = "BRL"
-    public static let supportedNetworks: [PKPaymentNetwork] = [.visa, .masterCard]
-    public static let merchantCapabilities: PKMerchantCapability = [.capability3DS]
+    public static let supportedNetworks: [PKPaymentNetwork] = [.visa, .masterCard, .amex, .discover, .elo]
+    public static let merchantCapabilities: PKMerchantCapability = [.capability3DS, .capabilityCredit, .capabilityDebit]
     public static let merchantIdentifier = "merchant.br.com.guilhermerambo.milshakrdemo"
 
     public static func configure(_ request: PKPaymentRequest) {
