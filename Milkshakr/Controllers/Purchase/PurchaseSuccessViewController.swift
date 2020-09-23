@@ -232,7 +232,7 @@ final class PurchaseSuccessViewController: UIViewController {
     private func installSiriMessage() {
         view.addSubview(siriMessageStack)
 
-        siriMessageStack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        siriMessageStack.topAnchor.constraint(equalTo: notificationPermissionButton.bottomAnchor, constant: 32).isActive = true
 
         siriMessageStack.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
         siriMessageStack.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
