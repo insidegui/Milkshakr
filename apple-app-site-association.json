@@ -1,0 +1,21 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "8C7439RJLG.br.com.guilhermerambo.Milkshakr",
+                "paths": ["*"]
+            }
+        ]
+    },
+    "appclips": {
+        "apps": [
+            "8C7439RJLG.br.com.guilhermerambo.Milkshakr.Clip"
+        ]
+    },
+    "activitycontinuation": {
+        "apps": [
+            "8C7439RJLG.br.com.guilhermerambo.Milkshakr"
+        ]
+    }
+}

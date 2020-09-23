@@ -189,6 +189,7 @@
 		DD01262120D08AE500455C3A /* PurchaseViewModel+Intent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseViewModel+Intent.swift"; sourceTree = "<group>"; };
 		DD01262320D08CD300455C3A /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		DD01262520D099A300455C3A /* demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
+		DD4E43A6251AB2E8004563B7 /* apple-app-site-association.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "apple-app-site-association.json"; sourceTree = "<group>"; };
 		DD65F8042518E7F900F76A61 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		DD65F8132518F53B00F76A61 /* Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD65F8152518F53B00F76A61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -441,6 +442,7 @@
 		DDFC669920CD9EAD000DD478 = {
 			isa = PBXGroup;
 			children = (
+				DD4E43A6251AB2E8004563B7 /* apple-app-site-association.json */,
 				DDFC66A420CD9EAD000DD478 /* Milkshakr */,
 				DDFC66DA20CDB73E000DD478 /* MilkshakrKit */,
 				DDF5F28320FBC50F00C1F4C3 /* MilkshakrIntents */,
