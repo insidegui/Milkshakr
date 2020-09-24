@@ -954,7 +954,7 @@
 					"@executable_path/Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -977,7 +977,7 @@
 					"@executable_path/Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -997,7 +997,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1018,7 +1018,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1038,7 +1038,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr.MilkshakrIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1058,7 +1058,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr.MilkshakrIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1196,7 +1196,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1217,7 +1217,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1244,7 +1244,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.MilkshakrKit;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.MilkshakrKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1274,7 +1274,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.MilkshakrKit;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.sample.agbiDnzrOh.MilkshakrKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
