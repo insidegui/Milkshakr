@@ -49,15 +49,9 @@
 		DDE10A9A20CF4A4900D4EC39 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9920CF4A4900D4EC39 /* PurchaseSuccessViewController.swift */; };
 		DDE10A9C20CF4A5B00D4EC39 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE10A9B20CF4A5B00D4EC39 /* PurchaseViewModel.swift */; };
 		DDF5F28520FBC50F00C1F4C3 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */; };
-		DDF5F28E20FBC50F00C1F4C3 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF5F28D20FBC50F00C1F4C3 /* IntentsUI.framework */; };
-		DDF5F29120FBC50F00C1F4C3 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F29020FBC50F00C1F4C3 /* IntentViewController.swift */; };
-		DDF5F29420FBC50F00C1F4C3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */; };
-		DDF5F29820FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DDF5F29B20FBC50F00C1F4C3 /* MilkshakrIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DDF5F2A520FBC52600C1F4C3 /* MilkshakrKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */; };
-		DDF5F2A820FBC52E00C1F4C3 /* MilkshakrKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */; };
 		DDF5F2A920FBC53600C1F4C3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		DDF5F2AA20FBC53600C1F4C3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DD01261E20D0800400455C3A /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		DDF5F2AE20FBD40300C1F4C3 /* ApplePayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F2AD20FBD40300C1F4C3 /* ApplePayConfiguration.swift */; };
 		DDF5F2B020FBD44800C1F4C3 /* PKPaymentRequest+Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F2AF20FBD44800C1F4C3 /* PKPaymentRequest+Purchase.swift */; };
 		DDFC66A620CD9EAD000DD478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC66A520CD9EAD000DD478 /* AppDelegate.swift */; };
@@ -97,13 +91,6 @@
 			remoteGlobalIDString = DDFC66D820CDB73E000DD478;
 			remoteInfo = MilkshakrKit;
 		};
-		DDF5F29620FBC50F00C1F4C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DDF5F28A20FBC50F00C1F4C3;
-			remoteInfo = MilkshakrIntentsUI;
-		};
 		DDF5F29920FBC50F00C1F4C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
@@ -112,13 +99,6 @@
 			remoteInfo = MilkshakrIntents;
 		};
 		DDF5F2A320FBC52100C1F4C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DDFC66D820CDB73E000DD478;
-			remoteInfo = MilkshakrKit;
-		};
-		DDF5F2A620FBC52A00C1F4C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDFC669A20CD9EAD000DD478 /* Project object */;
 			proxyType = 1;
@@ -163,7 +143,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				DDF5F29820FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex in Embed App Extensions */,
 				DDF5F29B20FBC50F00C1F4C3 /* MilkshakrIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -221,11 +200,7 @@
 		DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilkshakrIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF5F28420FBC50F00C1F4C3 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		DDF5F28620FBC50F00C1F4C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilkshakrIntentsUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF5F28D20FBC50F00C1F4C3 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		DDF5F29020FBC50F00C1F4C3 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
-		DDF5F29320FBC50F00C1F4C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		DDF5F29520FBC50F00C1F4C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF5F2AB20FBD3AC00C1F4C3 /* MilkshakrIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MilkshakrIntents.entitlements; sourceTree = "<group>"; };
 		DDF5F2AD20FBD40300C1F4C3 /* ApplePayConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayConfiguration.swift; sourceTree = "<group>"; };
 		DDF5F2AF20FBD44800C1F4C3 /* PKPaymentRequest+Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PKPaymentRequest+Purchase.swift"; sourceTree = "<group>"; };
@@ -268,15 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF5F2A520FBC52600C1F4C3 /* MilkshakrKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF5F28820FBC50F00C1F4C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF5F2A820FBC52E00C1F4C3 /* MilkshakrKit.framework in Frameworks */,
-				DDF5F28E20FBC50F00C1F4C3 /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,16 +386,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DDF5F28F20FBC50F00C1F4C3 /* MilkshakrIntentsUI */ = {
-			isa = PBXGroup;
-			children = (
-				DDF5F29020FBC50F00C1F4C3 /* IntentViewController.swift */,
-				DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */,
-				DDF5F29520FBC50F00C1F4C3 /* Info.plist */,
-			);
-			path = MilkshakrIntentsUI;
-			sourceTree = "<group>";
-		};
 		DDF5F2AC20FBD3F400C1F4C3 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,7 +402,6 @@
 				DDFC66A420CD9EAD000DD478 /* Milkshakr */,
 				DDFC66DA20CDB73E000DD478 /* MilkshakrKit */,
 				DDF5F28320FBC50F00C1F4C3 /* MilkshakrIntents */,
-				DDF5F28F20FBC50F00C1F4C3 /* MilkshakrIntentsUI */,
 				DD65F8142518F53B00F76A61 /* Clip */,
 				DDF5F28C20FBC50F00C1F4C3 /* Frameworks */,
 				DDFC66A320CD9EAD000DD478 /* Products */,
@@ -459,7 +414,6 @@
 				DDFC66A220CD9EAD000DD478 /* Milkshakr.app */,
 				DDFC66D920CDB73E000DD478 /* MilkshakrKit.framework */,
 				DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */,
-				DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */,
 				DD65F8132518F53B00F76A61 /* Clip.app */,
 			);
 			name = Products;
@@ -648,24 +602,6 @@
 			productReference = DDF5F28220FBC50F00C1F4C3 /* MilkshakrIntents.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DDF5F2A020FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntentsUI" */;
-			buildPhases = (
-				DDF5F28720FBC50F00C1F4C3 /* Sources */,
-				DDF5F28820FBC50F00C1F4C3 /* Frameworks */,
-				DDF5F28920FBC50F00C1F4C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DDF5F2A720FBC52A00C1F4C3 /* PBXTargetDependency */,
-			);
-			name = MilkshakrIntentsUI;
-			productName = MilkshakrIntentsUI;
-			productReference = DDF5F28B20FBC50F00C1F4C3 /* MilkshakrIntentsUI.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		DDFC66A120CD9EAD000DD478 /* Milkshakr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDFC66B420CD9EAE000DD478 /* Build configuration list for PBXNativeTarget "Milkshakr" */;
@@ -681,7 +617,6 @@
 			);
 			dependencies = (
 				DDFC66DF20CDB73E000DD478 /* PBXTargetDependency */,
-				DDF5F29720FBC50F00C1F4C3 /* PBXTargetDependency */,
 				DDF5F29A20FBC50F00C1F4C3 /* PBXTargetDependency */,
 				DD65F8262518F53C00F76A61 /* PBXTargetDependency */,
 			);
@@ -730,10 +665,6 @@
 							};
 						};
 					};
-					DDF5F28A20FBC50F00C1F4C3 = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1200;
-					};
 					DDFC66A120CD9EAD000DD478 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1200;
@@ -774,7 +705,6 @@
 				DDFC66A120CD9EAD000DD478 /* Milkshakr */,
 				DDFC66D820CDB73E000DD478 /* MilkshakrKit */,
 				DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */,
-				DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */,
 				DD65F8122518F53B00F76A61 /* Clip */,
 			);
 		};
@@ -794,14 +724,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF5F28920FBC50F00C1F4C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF5F29420FBC50F00C1F4C3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,15 +770,6 @@
 			files = (
 				DDF5F2A920FBC53600C1F4C3 /* Intents.intentdefinition in Sources */,
 				DDF5F28520FBC50F00C1F4C3 /* IntentHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF5F28720FBC50F00C1F4C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF5F2AA20FBC53600C1F4C3 /* Intents.intentdefinition in Sources */,
-				DDF5F29120FBC50F00C1F4C3 /* IntentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,11 +842,6 @@
 			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
 			targetProxy = DD65F8322518F55A00F76A61 /* PBXContainerItemProxy */;
 		};
-		DDF5F29720FBC50F00C1F4C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DDF5F28A20FBC50F00C1F4C3 /* MilkshakrIntentsUI */;
-			targetProxy = DDF5F29620FBC50F00C1F4C3 /* PBXContainerItemProxy */;
-		};
 		DDF5F29A20FBC50F00C1F4C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DDF5F28120FBC50F00C1F4C3 /* MilkshakrIntents */;
@@ -943,11 +851,6 @@
 			isa = PBXTargetDependency;
 			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
 			targetProxy = DDF5F2A320FBC52100C1F4C3 /* PBXContainerItemProxy */;
-		};
-		DDF5F2A720FBC52A00C1F4C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DDFC66D820CDB73E000DD478 /* MilkshakrKit */;
-			targetProxy = DDF5F2A620FBC52A00C1F4C3 /* PBXContainerItemProxy */;
 		};
 		DDFC66DF20CDB73E000DD478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -963,14 +866,6 @@
 				DD65F8212518F53C00F76A61 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		DDF5F29220FBC50F00C1F4C3 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDF5F29320FBC50F00C1F4C3 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		DDFC66AE20CD9EAE000DD478 /* LaunchScreen.storyboard */ = {
@@ -991,7 +886,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Clip/Resources/Clip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = Clip/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1000,7 +895,7 @@
 				);
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "-D APPCLIP";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1014,7 +909,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Clip/Resources/Clip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = Clip/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1023,7 +918,7 @@
 				);
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "-D APPCLIP";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1035,7 +930,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MilkshakrIntents/MilkshakrIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = MilkshakrIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1043,7 +938,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1056,7 +951,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MilkshakrIntents/MilkshakrIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = MilkshakrIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1064,47 +959,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		DDF5F29E20FBC50F00C1F4C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
-				INFOPLIST_FILE = MilkshakrIntentsUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DDF5F29F20FBC50F00C1F4C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
-				INFOPLIST_FILE = MilkshakrIntentsUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr.MilkshakrIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1235,14 +1090,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Milkshakr/Milkshakr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1256,14 +1111,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Milkshakr/Milkshakr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Milkshakr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1290,7 +1145,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.MilkshakrKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.MilkshakrKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1320,7 +1175,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.MilkshakrKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.MilkshakrKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1338,15 +1193,6 @@
 			buildConfigurations = (
 				DD65F8292518F53C00F76A61 /* Debug */,
 				DD65F82A2518F53C00F76A61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DDF5F2A020FBC50F00C1F4C3 /* Build configuration list for PBXNativeTarget "MilkshakrIntentsUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DDF5F29E20FBC50F00C1F4C3 /* Debug */,
-				DDF5F29F20FBC50F00C1F4C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,5 +9,5 @@
 import Foundation
 
 public struct Constants {
-    public static let userActivityType = "br.com.guilhermerambo.Milkshakr.activity"
+    public static let userActivityType = "com.nsbrltda.sample.Milkshakr.activity"
 }

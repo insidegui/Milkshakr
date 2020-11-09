@@ -10,7 +10,7 @@ import Foundation
 
 public extension UserDefaults {
     static let mskAppGroup: UserDefaults = {
-        guard let instance = UserDefaults(suiteName: "group.br.com.guilhermerambo.Milkshakr.Shared") else {
+        guard let instance = UserDefaults(suiteName: "group.com.nsbrltda.sample.Milkshakr") else {
             assertionFailure("Failed to instantiate UserDefaults for the shared App Group. Make sure this target's capabilities are configured properly.")
             return .standard
         }
