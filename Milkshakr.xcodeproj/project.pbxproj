@@ -908,7 +908,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Clip/Resources/Clip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = Clip/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -920,6 +921,7 @@
 				OTHER_SWIFT_FLAGS = "-D APPCLIP";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Milkshakr AppClip Bitrise Distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -950,7 +952,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MilkshakrIntents/MilkshakrIntents.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = MilkshakrIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -961,6 +964,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr.MilkshakrIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Milkshakr Intents Bitrise Distribution";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1110,7 +1114,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Milkshakr/Milkshakr.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = V45SL99ZK4;
 				INFOPLIST_FILE = Milkshakr/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -1120,6 +1125,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsbrltda.sample.Milkshakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Milkshakr Bitrise Distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
