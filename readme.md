@@ -1,20 +1,13 @@
 # Milkshakr
 
-### A sample implementation of `NSUserActivity`, custom intent and extensions for Siri shortcuts
+### A sample app with Siri Intents and an App Clip
 
-This project is the demo for my talk on Siri shortcuts. It implements a simple milkshake-ordering app that allows you to add a Siri shortcut for a previous order.
+This project is the demo for my talks on Siri shortcuts and App Clips. It implements a simple milkshake-ordering app that allows you to add a Siri shortcut for a previous order and includes an App Clip where the user can purchase a milkshake.
 
 The app also implements intents and intents UI extensions so you can finish a purchase using Siri without having to launch the app.
 
 ![](./Screenshots/SideBySide.png)
 
-### Notes and known issues:
+### Preparing the app to build locally
 
-- There are some layout issues on iOS devices other than iPhone X
-
-### References:
-
-- [Introduction to Siri Shortcuts](https://developer.apple.com/wwdc18/211)
-- [Building for Voice with Siri Shortcuts](https://developer.apple.com/wwdc18/214)
-
-I recommend watching those sessions using the [WWDC app for macOS](https://github.com/insidegui/WWDC).
+Run the script included in the root directory with `./fixbundleid.sh` in order to configure the project with a random bundle ID so that you don't need to change code signing settings manually.
